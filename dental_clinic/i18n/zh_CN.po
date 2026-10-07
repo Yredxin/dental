@@ -1,0 +1,2071 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dental_clinic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 07:40+0000\n"
+"PO-Revision-Date: 2026-10-07 07:40+0000\n"
+"Last-Translator: Odoo Dental Demo\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid ""
+"<br/>\n"
+"                                <strong>Code:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid ""
+"<br/>\n"
+"                                <strong>Date:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model:mail.template,body_html:dental_clinic.mail_template_dental_appointment_reminder
+msgid ""
+"<div style=\"font-family:Arial,sans-serif\">\n"
+"    <p>Dear <t t-out=\"object.patient_id.name\"></t>,</p>\n"
+"    <p>This is a friendly reminder of your dental appointment scheduled on\n"
+"       <strong><t t-out=\"object.start\"></t></strong> with\n"
+"       <strong>Dr. <t t-out=\"object.practitioner_id.name\"></t></strong>.</p>\n"
+"    <p>If you cannot make it, please contact us as soon as possible.</p>\n"
+"    <p>Best regards,<br><t t-out=\"object.company_id.name\"></t></p>\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_partner_form_inherit_dental
+msgid "<span class=\"ms-2\">Dental Patient</span>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "<strong>Advice:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "<strong>Diagnosis:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "<strong>Notes:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "<strong>Patient:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "<strong>Practitioner:</strong>"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "<strong>Practitioner:</strong> Dr."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.constraint,message:dental_clinic.constraint_dental_tooth_tooth_uniq
+msgid "A tooth number must be unique per patient."
+msgstr "同一患者的牙位编号不能重复。"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__a_pos
+msgid "A+"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__a_neg
+msgid "A-"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__ab_pos
+msgid "AB+"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__ab_neg
+msgid "AB-"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_needaction
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_needaction
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_needaction
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_needaction
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__active
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__active
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__active
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__active
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_search
+msgid "Active"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_exception_decoration
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_exception_decoration
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_exception_decoration
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_type_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_type_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_type_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#, python-format
+msgid "Add at least one treatment line."
+msgstr "请至少添加一条治疗项目。"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Address"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+msgid "Advice"
+msgstr "用药建议"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__advice
+msgid "Advice / Posology"
+msgstr "医嘱 / 用法"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_tooth__surface
+msgid "Affected surface."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__age
+msgid "Age"
+msgstr "年龄"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_kanban
+msgid "Age:"
+msgstr "年龄："
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_appointments_list
+msgid "All Appointments"
+msgstr "全部预约"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_patients
+msgid "All Patients"
+msgstr "全部患者"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__allday
+msgid "Allday"
+msgstr "全天"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__allergies
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Allergies"
+msgstr "过敏史"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_medical_history__kind__allergy
+msgid "Allergy"
+msgstr "过敏"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__appointment_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__appointment_id
+msgid "Appointment"
+msgstr "预约"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__appointment_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__appointment_count
+msgid "Appointment Count"
+msgstr ""
+
+#. module: dental_clinic
+#: model:mail.template,subject:dental_clinic.mail_template_dental_appointment_reminder
+msgid "Appointment reminder - {{ object.name }}"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_appointment
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__appointment_ids
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_appointments_top
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_calendar
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_tree
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+#, python-format
+msgid "Appointments"
+msgstr "预约"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_attachment_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_attachment_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_attachment_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_attachment_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__b_pos
+msgid "B+"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__b_neg
+msgid "B-"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_billing_top
+msgid "Billing"
+msgstr "账单"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__blood_type
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Blood Type"
+msgstr "血型"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__bridge
+msgid "Bridge"
+msgstr "固定桥"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__surface__b
+msgid "Buccal"
+msgstr "颊面"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_appointment_calendar
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_appointments_calendar
+msgid "Calendar"
+msgstr "日历"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__color
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__color
+msgid "Calendar Color"
+msgstr "日历颜色"
+
+#. module: dental_clinic
+#: model:res.groups,comment:dental_clinic.group_dental_receptionist
+msgid "Can manage patients and appointments."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_invoice_wizard_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__cancel
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_prescription__state__cancel
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan__state__cancel
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan_line__state__cancel
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__caries
+msgid "Caries"
+msgstr "龋齿"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__category
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_search
+msgid "Category"
+msgstr "类别"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+msgid "Check-In"
+msgstr "登记到诊"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__checked_in
+msgid "Checked-In"
+msgstr "已签到"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__chronic_diseases
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Chronic Diseases"
+msgstr "慢性疾病"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__city
+msgid "City"
+msgstr "城市"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_clinical_top
+msgid "Clinical"
+msgstr "临床"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__code
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__code
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Code"
+msgstr "编码"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Code:"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__color
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__color
+msgid "Color"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__company_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__company_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__company_id
+msgid "Company"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__condition
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Condition"
+msgstr "状态"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Confirm"
+msgstr "确认"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__confirmed
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_prescription__state__confirmed
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan__state__confirmed
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_res_partner
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Contact"
+msgstr "联系信息"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__cosmetic
+msgid "Cosmetic"
+msgstr "美容治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__country_id
+msgid "Country"
+msgstr "国家 / 地区"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_invoice_wizard_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+#, python-format
+msgid "Create Invoice"
+msgstr "创建发票"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_invoice_wizard
+msgid "Create Invoice from Treatment Plan"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.actions.act_window,help:dental_clinic.action_dental_patient
+msgid "Create your first patient!"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__create_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__create_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__crown
+msgid "Crown"
+msgstr "牙冠"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__currency_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__currency_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__current_medications
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Current Medications"
+msgstr "当前用药"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__current_medications
+msgid "Current daily medications."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "DOB:"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_dashboard
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__date
+msgid "Date"
+msgstr "日期"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__birth_date
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Date of Birth"
+msgstr "出生日期"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Date:"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__duration
+msgid "Default Duration (h)"
+msgstr "默认时长（小时）"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_root
+msgid "Dental"
+msgstr "牙科"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_appointment
+msgid "Dental Appointment"
+msgstr "牙科预约"
+
+#. module: dental_clinic
+#: model:ir.module.category,name:dental_clinic.module_category_dental
+msgid "Dental Clinic"
+msgstr "牙科诊所"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__hygienist
+msgid "Dental Hygienist"
+msgstr "口腔洁治师"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_patient
+#: model:ir.model.fields,field_description:dental_clinic.field_account_bank_statement_line__dental_patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_account_move__dental_patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_account_payment__dental_patient_id
+msgid "Dental Patient"
+msgstr "牙科患者"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_practitioner
+msgid "Dental Practitioner / Dentist"
+msgstr "执业牙医"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_prescription
+msgid "Dental Prescription"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_room
+msgid "Dental Room / Chair"
+msgstr "诊室 / 牙椅"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_treatment
+msgid "Dental Treatment / Service Catalog"
+msgstr "牙科治疗项目目录"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_treatment_plan
+msgid "Dental Treatment Plan"
+msgstr ""
+
+#. module: dental_clinic
+#: model:mail.template,name:dental_clinic.mail_template_dental_appointment_reminder
+msgid "Dental: Appointment Reminder"
+msgstr ""
+
+#. module: dental_clinic
+#: model:res.groups,name:dental_clinic.group_dental_user
+msgid "Dentist / User"
+msgstr "牙医 / 用户"
+
+#. module: dental_clinic
+#: model:res.groups,comment:dental_clinic.group_dental_user
+msgid "Dentists, hygienists."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__description
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__description
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__description
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__description
+msgid "Description"
+msgstr "说明"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__diagnosis
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+msgid "Diagnosis"
+msgstr "诊断"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__diagnostic
+msgid "Diagnostic"
+msgstr "诊断检查"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Disc."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__discount
+msgid "Disc. %"
+msgstr "折扣 %"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_medical_history__kind__disease
+msgid "Disease"
+msgstr "疾病"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__display_name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__surface__d
+msgid "Distal"
+msgstr "远中面"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__marital_status__divorced
+msgid "Divorced"
+msgstr "离异"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__done
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan__state__done
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan_line__state__done
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Done"
+msgstr "已完成"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__dosage
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Dosage"
+msgstr "剂量"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Dr."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__draft
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_prescription__state__draft
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan__state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__duration
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__duration
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Duration"
+msgstr "时长"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__email
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__email
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Email"
+msgstr "电子邮箱"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Emergency"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Emergency Contact"
+msgstr "紧急联系人"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__emergency_name
+msgid "Emergency Name"
+msgstr "紧急联系人姓名"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__emergency_phone
+msgid "Emergency Phone"
+msgstr "紧急联系电话"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__emergency_relation
+msgid "Emergency Relation"
+msgstr "与患者关系"
+
+#. module: dental_clinic
+#: model:ir.model.constraint,message:dental_clinic.constraint_dental_appointment_check_dates
+msgid "End must be after start."
+msgstr "结束时间必须晚于开始时间。"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__endodontic
+msgid "Endodontic"
+msgstr "牙体牙髓治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__endodontics
+msgid "Endodontics"
+msgstr "牙体牙髓科"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__equipment
+msgid "Equipment"
+msgstr "设备"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_room__equipment
+msgid "Equipment available in this room/chair."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__expected_end_date
+msgid "Expected End Date"
+msgstr "预计结束日期"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__extracted
+msgid "Extracted"
+msgstr "已拔除"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_tooth__tooth_number
+msgid "FDI numbering 11-48."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__gender__female
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Female"
+msgstr "女"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__filled
+msgid "Filled"
+msgstr "已补牙"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_follower_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_follower_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_follower_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_follower_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_partner_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_partner_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_partner_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_partner_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__activity_type_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__activity_type_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__activity_type_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__frequency
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Frequency"
+msgstr "用药频次"
+
+#. module: dental_clinic
+#: model:res.groups,comment:dental_clinic.group_dental_manager
+msgid "Full access including configuration."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__gender
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Gender"
+msgstr "性别"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__general
+msgid "General Dentistry"
+msgstr "综合牙科"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_search
+msgid "Group By"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__has_message
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__has_message
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__has_message
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__has_message
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__healthy
+msgid "Healthy"
+msgstr "健康"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__id
+msgid "ID"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_exception_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_exception_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_exception_icon
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__activity_exception_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__activity_exception_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__activity_exception_icon
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Identity"
+msgstr "基本信息"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__message_needaction
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__message_needaction
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__message_needaction
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__message_needaction
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__message_has_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__message_has_sms_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__message_has_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__message_has_sms_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__message_has_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__message_has_sms_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__message_has_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__message_has_sms_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__message_has_error
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__image_1920
+msgid "Image 1920"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__implant
+msgid "Implant"
+msgstr "种植牙"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__implantology
+msgid "Implantology"
+msgstr "口腔种植"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan__state__in_progress
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan_line__state__in_progress
+msgid "In Progress"
+msgstr "进行中"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__instructions
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Instructions"
+msgstr "用法说明"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__notes
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Internal Notes"
+msgstr "内部备注"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/wizards/dental_invoice_wizard.py:0
+#, python-format
+msgid "Invoice"
+msgstr "发票"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__invoice_count
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__invoice_count
+msgid "Invoice Count"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__invoice_date
+msgid "Invoice Date"
+msgstr "发票日期"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__invoiced
+msgid "Invoiced"
+msgstr "已开票"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__invoiced_amount
+msgid "Invoiced Amount"
+msgstr "已开票金额"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__invoice_ids
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+#, python-format
+msgid "Invoices"
+msgstr "发票"
+
+#. module: dental_clinic
+#: model_terms:ir.actions.act_window,help:dental_clinic.action_dental_invoices
+msgid "Invoices are created from confirmed treatment plans."
+msgstr "确认治疗计划后可创建发票。"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_res_partner__is_dental_patient
+#: model:ir.model.fields,field_description:dental_clinic.field_res_users__is_dental_patient
+msgid "Is Dental Patient"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_is_follower
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_is_follower
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_is_follower
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_is_follower
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__journal_id
+msgid "Journal"
+msgstr "日记账"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__kind
+msgid "Kind"
+msgstr "类型"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__allergies
+msgid "Known allergies (penicillin, latex, anesthetics, etc.)"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__last_treatment_date
+msgid "Last Treatment Date"
+msgstr "最近治疗日期"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Last Tx"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__write_uid
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__write_date
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__license_number
+msgid "License Number"
+msgstr "执业证号"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "License:"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__line_ids
+msgid "Line"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__line_ids
+msgid "Lines to Invoice"
+msgstr "待开票项目"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__surface__l
+msgid "Lingual"
+msgstr "舌面"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__product_id
+msgid "Linked Product/Service"
+msgstr "关联产品 / 服务"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__quadrant__ll
+msgid "Lower Left"
+msgstr "左下"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__quadrant__lr
+msgid "Lower Right"
+msgstr "右下"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__gender__male
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Male"
+msgstr "男"
+
+#. module: dental_clinic
+#: model:ir.module.category,description:dental_clinic.module_category_dental
+msgid "Manage the dental clinic."
+msgstr ""
+
+#. module: dental_clinic
+#: model:res.groups,name:dental_clinic.group_dental_manager
+msgid "Manager"
+msgstr "管理员"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__marital_status
+msgid "Marital Status"
+msgstr "婚姻状况"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+msgid "Mark Done"
+msgstr "标记完成"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__marital_status__married
+msgid "Married"
+msgstr "已婚"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__medical_history_ids
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Medical History"
+msgstr "病史"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Medical Info"
+msgstr "病历信息"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_medical_history__kind__medication
+msgid "Medication"
+msgstr "用药"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+msgid "Medications"
+msgstr "药品"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__product_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Medicine"
+msgstr "药品"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__name
+msgid "Medicine Name"
+msgstr "药品名称"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__surface__m
+msgid "Mesial"
+msgstr "近中面"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_has_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_has_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_has_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_has_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__missing
+msgid "Missing"
+msgstr "缺失"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__mobile
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Mobile"
+msgstr "手机"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__name
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__name
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Name"
+msgstr "名称"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__national_id
+msgid "National ID"
+msgstr "证件号码"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_appointment.py:0
+#: code:addons/dental_clinic/models/dental_appointment.py:0
+#: code:addons/dental_clinic/models/dental_appointment.py:0
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: code:addons/dental_clinic/models/dental_prescription.py:0
+#: code:addons/dental_clinic/models/dental_prescription.py:0
+#: code:addons/dental_clinic/models/dental_prescription.py:0
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#: code:addons/dental_clinic/models/dental_treatment_plan.py:0
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_calendar_event_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_date_deadline
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_summary
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_summary
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_summary
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_type_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_type_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_type_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/wizards/dental_invoice_wizard.py:0
+#, python-format
+msgid "No lines selected to invoice."
+msgstr "没有选择待开票项目。"
+
+#. module: dental_clinic
+#: model_terms:ir.actions.act_window,help:dental_clinic.action_dental_invoices
+msgid "No patient invoices yet."
+msgstr "暂无患者发票。"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_appointment__state__no_show
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+msgid "No-Show"
+msgstr "未到诊"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__note
+msgid "Note"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__notes
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__notes
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__notes
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__notes
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Notes"
+msgstr "备注"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_practitioner_form
+msgid "Notes..."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_needaction_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_needaction_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_needaction_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_needaction_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_has_error_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_has_error_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_has_error_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_has_error_counter
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__message_needaction_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__message_needaction_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__message_needaction_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__message_needaction_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__message_has_error_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__message_has_error_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__message_has_error_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__message_has_error_counter
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__o_pos
+msgid "O+"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__blood_type__o_neg
+msgid "O-"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__surface__o
+msgid "Occlusal"
+msgstr "咬合面"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__occupation
+msgid "Occupation"
+msgstr "职业"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__tooth_ids
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_odontogram
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Odontogram"
+msgstr "牙位图"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_tooth
+msgid "Odontogram Entries"
+msgstr "牙位记录"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__surgery
+msgid "Oral Surgery"
+msgstr "口腔外科"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__orthodontic
+msgid "Orthodontic"
+msgstr "正畸治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__orthodontics
+msgid "Orthodontics"
+msgstr "正畸科"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_medical_history__kind__other
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__gender__other
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__other
+msgid "Other"
+msgstr "其他"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__patient_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Patient"
+msgstr "患者"
+
+#. module: dental_clinic
+#: model:ir.actions.report,name:dental_clinic.action_report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Patient Card"
+msgstr "患者卡片"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__code
+msgid "Patient Code"
+msgstr "患者编号"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_invoices
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_invoices
+msgid "Patient Invoices"
+msgstr "患者发票"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_medical_history
+msgid "Patient Medical History Entry"
+msgstr "患者病史记录"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_res_partner__dental_patient_id
+#: model:ir.model.fields,field_description:dental_clinic.field_res_users__dental_patient_id
+msgid "Patient Record"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.constraint,message:dental_clinic.constraint_dental_patient_code_uniq
+msgid "Patient code must be unique!"
+msgstr "患者编号必须唯一！"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/wizards/dental_invoice_wizard.py:0
+#, python-format
+msgid "Patient has no related contact."
+msgstr "患者尚未关联联系人。"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Patient name..."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_patient
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_patients_top
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_tree
+msgid "Patients"
+msgstr "患者"
+
+#. module: dental_clinic
+#: model_terms:ir.actions.act_window,help:dental_clinic.action_dental_patient
+msgid ""
+"Patients are linked to contacts and get a 32-teeth odontogram automatically."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__pedodontics
+msgid "Pediatric Dentistry"
+msgstr "儿童牙科"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Penicillin, latex, anesthetics..."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__periodontic
+msgid "Periodontic"
+msgstr "牙周治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__periodontics
+msgid "Periodontics"
+msgstr "牙周科"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__phone
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__phone
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Phone"
+msgstr "电话"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_invoice_wizard__plan_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__plan_id
+msgid "Plan"
+msgstr "治疗计划"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment_plan_line__state__planned
+msgid "Planned"
+msgstr "计划中"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__treatment_ids
+msgid "Planned Treatments"
+msgstr "计划治疗项目"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Plans"
+msgstr "治疗计划"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__practitioner_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__practitioner_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__practitioner_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__practitioner_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__practitioner_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Practitioner"
+msgstr "牙医"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_appointment.py:0
+#, python-format
+msgid ""
+"Practitioner %(name)s already has an appointment in this time slot "
+"(%(other)s)."
+msgstr "牙医 %(name)s 在此时段已有预约（%(other)s）。"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_practitioner
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_config_practitioners
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_practitioner_tree
+msgid "Practitioners"
+msgstr "执业牙医"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__pregnant
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Pregnant"
+msgstr "怀孕"
+
+#. module: dental_clinic
+#: model:ir.actions.report,name:dental_clinic.action_report_dental_prescription
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__prescription_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+msgid "Prescription"
+msgstr "处方"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__prescription_count
+msgid "Prescription Count"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_prescription_line
+msgid "Prescription Line"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_prescription
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__prescription_ids
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_prescriptions
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+#, python-format
+msgid "Prescriptions"
+msgstr "处方"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__preventive
+msgid "Preventive"
+msgstr "预防治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__price_unit
+msgid "Price Unit"
+msgstr "单价"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+msgid "Print"
+msgstr "打印"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__prosthetic
+msgid "Prosthetic"
+msgstr "修复义齿"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_practitioner__speciality__prosthodontics
+msgid "Prosthodontics"
+msgstr "修复科"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Qty"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__quadrant
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Quadrant"
+msgstr "牙区"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__quantity
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__quantity
+msgid "Quantity"
+msgstr "数量"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__reason
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+msgid "Reason"
+msgstr "预约原因"
+
+#. module: dental_clinic
+#: model:res.groups,name:dental_clinic.group_dental_receptionist
+msgid "Receptionist"
+msgstr "前台接待"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__partner_id
+msgid "Related Contact"
+msgstr "关联联系人"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__plan_id
+msgid "Related Plan"
+msgstr "关联治疗计划"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__user_id
+msgid "Related User"
+msgstr "关联用户"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__reminder_sent
+msgid "Reminder Sent"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_prescription_form
+msgid "Reset"
+msgstr "重置"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Reset to Draft"
+msgstr "重置为草稿"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__activity_user_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__activity_user_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__activity_user_id
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__restorative
+msgid "Restorative"
+msgstr "修复治疗"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__room_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Room"
+msgstr "诊室"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_room_tree
+msgid "Rooms"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_room
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_config_rooms
+msgid "Rooms / Chairs"
+msgstr "诊室 / 牙椅"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__root_canal
+msgid "Root Canal"
+msgstr "根管治疗"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_prescription
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+msgid "Rx"
+msgstr "处方"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__message_has_sms_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__message_has_sms_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__message_has_sms_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__message_has_sms_error
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__scheduled_date
+msgid "Scheduled Date"
+msgstr "计划日期"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_form
+msgid "Send Reminder"
+msgstr "发送提醒"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription_line__sequence
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_room__sequence
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__sequence
+msgid "Sequence"
+msgstr "顺序"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__marital_status__single
+msgid "Single"
+msgstr "未婚"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__smoker
+msgid "Smoker"
+msgstr "吸烟者"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_search
+msgid "Smokers"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__speciality
+msgid "Speciality"
+msgstr "专科"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__price
+msgid "Standard Price"
+msgstr "标准价格"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__start
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Start"
+msgstr "开始"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__state
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__state
+msgid "State"
+msgstr "状态"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Status"
+msgstr "状态"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__activity_state
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__activity_state
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__activity_state
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__stop
+msgid "Stop"
+msgstr "结束"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__street
+msgid "Street"
+msgstr "街道"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__subtotal
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Subtotal"
+msgstr "小计"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__surface
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+msgid "Surface"
+msgstr "牙面"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_medical_history__kind__surgery
+msgid "Surgery"
+msgstr "手术"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_treatment__category__surgical
+msgid "Surgical"
+msgstr "外科治疗"
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_whitening
+msgid "Teeth Whitening"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_medical_history__title
+msgid "Title"
+msgstr "标题"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__condition__to_extract
+msgid "To Extract"
+msgstr "待拔除"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_appointments_today
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Today"
+msgstr "今日"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_appointment_today
+msgid "Today's Appointments"
+msgstr "今日预约"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__tooth_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_patient_card
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Tooth"
+msgstr "牙齿"
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_tooth
+msgid "Tooth (Odontogram entry)"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_tooth__tooth_number
+msgid "Tooth Number"
+msgstr "牙位编号"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment__requires_tooth
+msgid "Tooth-Specific"
+msgstr "指定牙位"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+msgid "Total"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__total_amount
+msgid "Total Amount"
+msgstr "总金额"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__total_due
+msgid "Total Due"
+msgstr "待付款总额"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__total_invoiced
+msgid "Total Invoiced"
+msgstr "已开票总额"
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Total:"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan_line__treatment_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Treatment"
+msgstr "治疗项目"
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/wizards/dental_invoice_wizard.py:0
+#, python-format
+msgid "Treatment \"%s\" has no linked product."
+msgstr "治疗项目“%s”尚未关联产品。"
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_config_treatments
+msgid "Treatment Catalog"
+msgstr "治疗项目目录"
+
+#. module: dental_clinic
+#: model:ir.actions.report,name:dental_clinic.action_report_dental_treatment_plan
+#: model:ir.model.fields,field_description:dental_clinic.field_account_bank_statement_line__dental_plan_id
+#: model:ir.model.fields,field_description:dental_clinic.field_account_move__dental_plan_id
+#: model:ir.model.fields,field_description:dental_clinic.field_account_payment__dental_plan_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Treatment Plan"
+msgstr "治疗计划"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__treatment_plan_count
+msgid "Treatment Plan Count"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model,name:dental_clinic.model_dental_treatment_plan_line
+msgid "Treatment Plan Line"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/dental_patient.py:0
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_treatment_plan
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__treatment_plan_ids
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_plans
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_patient_form
+#, python-format
+msgid "Treatment Plans"
+msgstr "治疗计划"
+
+#. module: dental_clinic
+#: model:ir.actions.act_window,name:dental_clinic.action_dental_treatment
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__line_ids
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_plan_form
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_treatment_tree
+msgid "Treatments"
+msgstr "治疗项目"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__activity_exception_decoration
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__activity_exception_decoration
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__activity_exception_decoration
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.report_dental_treatment_plan
+msgid "Unit Price"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.view_dental_appointment_search
+msgid "Upcoming"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__quadrant__ul
+msgid "Upper Left"
+msgstr "左上"
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_tooth__quadrant__ur
+msgid "Upper Right"
+msgstr "右上"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment__product_id
+msgid "Used for invoicing. Auto-created if empty."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_appointment__website_message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__website_message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_practitioner__website_message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_prescription__website_message_ids
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_treatment_plan__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_appointment__website_message_ids
+#: model:ir.model.fields,help:dental_clinic.field_dental_patient__website_message_ids
+#: model:ir.model.fields,help:dental_clinic.field_dental_practitioner__website_message_ids
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription__website_message_ids
+#: model:ir.model.fields,help:dental_clinic.field_dental_treatment_plan__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields.selection,name:dental_clinic.selection__dental_patient__marital_status__widowed
+msgid "Widowed"
+msgstr "丧偶"
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_dental_patient__zip
+msgid "Zip"
+msgstr "邮编"
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription_line__frequency
+msgid "e.g. 3 times a day"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription_line__dosage
+msgid "e.g. 500mg"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,help:dental_clinic.field_dental_prescription_line__duration
+msgid "e.g. 7 days"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_consultation
+msgid "初诊检查"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_extraction
+msgid "拔牙"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_root_canal
+msgid "根管治疗"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_cleaning
+msgid "洗牙"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_crown
+msgid "牙冠"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_implant
+msgid "种植牙"
+msgstr ""
+
+#. module: dental_clinic
+#: model:dental.treatment,name:dental_clinic.treatment_filling
+msgid "补牙"
+msgstr ""

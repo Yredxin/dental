@@ -118,29 +118,17 @@ class DentalPatient(models.Model):
 
     def _create_odontogram(self):
         Tooth = self.env['dental.tooth']
-        teeth = [
-            (11, 'Upper Right Central Incisor'), (12, 'Upper Right Lateral Incisor'),
-            (13, 'Upper Right Canine'), (14, 'Upper Right First Premolar'),
-            (15, 'Upper Right Second Premolar'), (16, 'Upper Right First Molar'),
-            (17, 'Upper Right Second Molar'), (18, 'Upper Right Third Molar'),
-            (21, 'Upper Left Central Incisor'), (22, 'Upper Left Lateral Incisor'),
-            (23, 'Upper Left Canine'), (24, 'Upper Left First Premolar'),
-            (25, 'Upper Left Second Premolar'), (26, 'Upper Left First Molar'),
-            (27, 'Upper Left Second Molar'), (28, 'Upper Left Third Molar'),
-            (31, 'Lower Left Central Incisor'), (32, 'Lower Left Lateral Incisor'),
-            (33, 'Lower Left Canine'), (34, 'Lower Left First Premolar'),
-            (35, 'Lower Left Second Premolar'), (36, 'Lower Left First Molar'),
-            (37, 'Lower Left Second Molar'), (38, 'Lower Left Third Molar'),
-            (41, 'Lower Right Central Incisor'), (42, 'Lower Right Lateral Incisor'),
-            (43, 'Lower Right Canine'), (44, 'Lower Right First Premolar'),
-            (45, 'Lower Right Second Premolar'), (46, 'Lower Right First Molar'),
-            (47, 'Lower Right Second Molar'), (48, 'Lower Right Third Molar'),
-        ]
-        for num, label in teeth:
+        teeth = [quadrant * 10 + position for quadrant in (1, 2, 3, 4) for position in range(1, 9)]
+        quadrant_labels = {1: '右上', 2: '左上', 3: '左下', 4: '右下'}
+        position_labels = {
+            1: '中切牙', 2: '侧切牙', 3: '尖牙', 4: '第一前磨牙',
+            5: '第二前磨牙', 6: '第一磨牙', 7: '第二磨牙', 8: '第三磨牙',
+        }
+        for num in teeth:
             Tooth.create({
                 'patient_id': self.id,
                 'tooth_number': num,
-                'name': label,
+                'name': quadrant_labels[num // 10] + position_labels[num % 10],
                 'condition': 'healthy',
             })
 

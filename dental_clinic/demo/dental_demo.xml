@@ -79,9 +79,9 @@
             <field name="practitioner_id" ref="demo_practitioner_1"/>
             <field name="room_id" ref="room_1"/>
             <field name="start"
-                   eval="(datetime.datetime.now() + relativedelta(days=1)).strftime('%Y-%m-%d 10:00:00')"/>
+                   eval="(datetime.now() + relativedelta(days=1)).strftime('%Y-%m-%d 10:00:00')"/>
             <field name="stop"
-                   eval="(datetime.datetime.now() + relativedelta(days=1)).strftime('%Y-%m-%d 11:00:00')"/>
+                   eval="(datetime.now() + relativedelta(days=1)).strftime('%Y-%m-%d 11:00:00')"/>
             <field name="reason">Initial check-up</field>
             <field name="state">confirmed</field>
             <field name="treatment_ids" eval="[(4, ref('treatment_consultation')), (4, ref('treatment_cleaning'))]"/>
@@ -91,9 +91,9 @@
             <field name="practitioner_id" ref="demo_practitioner_2"/>
             <field name="room_id" ref="room_2"/>
             <field name="start"
-                   eval="(datetime.datetime.now() + relativedelta(days=2)).strftime('%Y-%m-%d 14:00:00')"/>
+                   eval="(datetime.now() + relativedelta(days=2)).strftime('%Y-%m-%d 14:00:00')"/>
             <field name="stop"
-                   eval="(datetime.datetime.now() + relativedelta(days=2)).strftime('%Y-%m-%d 15:30:00')"/>
+                   eval="(datetime.now() + relativedelta(days=2)).strftime('%Y-%m-%d 15:30:00')"/>
             <field name="reason">Orthodontic consultation</field>
             <field name="state">confirmed</field>
         </record>

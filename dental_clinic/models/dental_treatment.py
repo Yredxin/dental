@@ -43,7 +43,6 @@ class DentalTreatment(models.Model):
                     'type': 'service',
                     'list_price': rec.price,
                     'default_code': rec.code or False,
-                    'invoice_policy': 'order',
                 })
                 rec.product_id = product.id
         return records

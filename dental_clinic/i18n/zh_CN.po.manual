@@ -1,0 +1,690 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Dental Clinic\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Dental"
+msgstr "牙科"
+
+msgid "Dental Clinic"
+msgstr "牙科诊所"
+
+msgid "Dashboard"
+msgstr "仪表盘"
+
+msgid "Patients"
+msgstr "患者"
+
+msgid "Patient"
+msgstr "患者"
+
+msgid "All Patients"
+msgstr "全部患者"
+
+msgid "Odontogram"
+msgstr "牙位图"
+
+msgid "Odontogram Entries"
+msgstr "牙位记录"
+
+msgid "Appointments"
+msgstr "预约"
+
+msgid "Appointment"
+msgstr "预约"
+
+msgid "All Appointments"
+msgstr "全部预约"
+
+msgid "Today's Appointments"
+msgstr "今日预约"
+
+msgid "Calendar"
+msgstr "日历"
+
+msgid "Clinical"
+msgstr "临床"
+
+msgid "Treatment Plans"
+msgstr "治疗计划"
+
+msgid "Treatment Plan"
+msgstr "治疗计划"
+
+msgid "Prescriptions"
+msgstr "处方"
+
+msgid "Prescription"
+msgstr "处方"
+
+msgid "Billing"
+msgstr "账单"
+
+msgid "Patient Invoices"
+msgstr "患者发票"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Treatment Catalog"
+msgstr "治疗项目目录"
+
+msgid "Practitioners"
+msgstr "执业牙医"
+
+msgid "Practitioner"
+msgstr "牙医"
+
+msgid "Rooms / Chairs"
+msgstr "诊室 / 牙椅"
+
+msgid "Room"
+msgstr "诊室"
+
+msgid "Dental Room / Chair"
+msgstr "诊室 / 牙椅"
+
+msgid "Dentist / User"
+msgstr "牙医 / 用户"
+
+msgid "Dentist"
+msgstr "牙医"
+
+msgid "Receptionist"
+msgstr "前台接待"
+
+msgid "Manager"
+msgstr "管理员"
+
+msgid "Dental Patient"
+msgstr "牙科患者"
+
+msgid "Dental Appointment"
+msgstr "牙科预约"
+
+msgid "Dental Practitioner / Dentist"
+msgstr "执业牙医"
+
+msgid "Patient Medical History Entry"
+msgstr "患者病史记录"
+
+msgid "Medical History"
+msgstr "病史"
+
+msgid "Allergies"
+msgstr "过敏史"
+
+msgid "Chronic Diseases"
+msgstr "慢性疾病"
+
+msgid "Current Medications"
+msgstr "当前用药"
+
+msgid "Emergency Contact"
+msgstr "紧急联系人"
+
+msgid "Emergency Name"
+msgstr "紧急联系人姓名"
+
+msgid "Emergency Phone"
+msgstr "紧急联系电话"
+
+msgid "Emergency Relation"
+msgstr "与患者关系"
+
+msgid "Related Contact"
+msgstr "关联联系人"
+
+msgid "Patient Code"
+msgstr "患者编号"
+
+msgid "Date of Birth"
+msgstr "出生日期"
+
+msgid "Age"
+msgstr "年龄"
+
+msgid "National ID"
+msgstr "证件号码"
+
+msgid "Blood Type"
+msgstr "血型"
+
+msgid "Occupation"
+msgstr "职业"
+
+msgid "Gender"
+msgstr "性别"
+
+msgid "Male"
+msgstr "男"
+
+msgid "Female"
+msgstr "女"
+
+msgid "Other"
+msgstr "其他"
+
+msgid "Phone"
+msgstr "电话"
+
+msgid "Mobile"
+msgstr "手机"
+
+msgid "Email"
+msgstr "电子邮箱"
+
+msgid "Street"
+msgstr "街道"
+
+msgid "City"
+msgstr "城市"
+
+msgid "ZIP"
+msgstr "邮编"
+
+msgid "Internal Notes"
+msgstr "内部备注"
+
+msgid "Notes"
+msgstr "备注"
+
+msgid "Total Invoiced"
+msgstr "已开票总额"
+
+msgid "Total Due"
+msgstr "待付款总额"
+
+msgid "Patient Card"
+msgstr "患者卡片"
+
+msgid "Appointment Calendar"
+msgstr "预约日历"
+
+msgid "Planned Treatments"
+msgstr "计划治疗项目"
+
+msgid "Related Plan"
+msgstr "关联治疗计划"
+
+msgid "Start"
+msgstr "开始"
+
+msgid "Stop"
+msgstr "结束"
+
+msgid "Duration"
+msgstr "时长"
+
+msgid "All Day"
+msgstr "全天"
+
+msgid "Reason"
+msgstr "预约原因"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Draft"
+msgstr "草稿"
+
+msgid "Confirmed"
+msgstr "已确认"
+
+msgid "Checked-In"
+msgstr "已签到"
+
+msgid "Done"
+msgstr "已完成"
+
+msgid "In Progress"
+msgstr "进行中"
+
+msgid "Cancelled"
+msgstr "已取消"
+
+msgid "No-Show"
+msgstr "未到诊"
+
+msgid "Planned"
+msgstr "计划中"
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Create Invoice"
+msgstr "创建发票"
+
+msgid "Print"
+msgstr "打印"
+
+msgid "Confirm"
+msgstr "确认"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Treatments"
+msgstr "治疗项目"
+
+msgid "Treatments / Procedures"
+msgstr "治疗项目 / 操作"
+
+msgid "Lines to Invoice"
+msgstr "待开票项目"
+
+msgid "Tooth"
+msgstr "牙齿"
+
+msgid "Tooth Number"
+msgstr "牙位编号"
+
+msgid "Tooth-Specific"
+msgstr "指定牙位"
+
+msgid "Condition"
+msgstr "状态"
+
+msgid "Surface"
+msgstr "牙面"
+
+msgid "Healthy"
+msgstr "健康"
+
+msgid "Caries"
+msgstr "龋齿"
+
+msgid "Filled"
+msgstr "已补牙"
+
+msgid "Filling"
+msgstr "补牙"
+
+msgid "Crown"
+msgstr "牙冠"
+
+msgid "Root Canal"
+msgstr "根管治疗"
+
+msgid "Extracted"
+msgstr "已拔除"
+
+msgid "Missing"
+msgstr "缺失"
+
+msgid "Implant"
+msgstr "种植牙"
+
+msgid "Bridge"
+msgstr "固定桥"
+
+msgid "To Extract"
+msgstr "待拔除"
+
+msgid "Upper Right"
+msgstr "右上"
+
+msgid "Upper Left"
+msgstr "左上"
+
+msgid "Lower Right"
+msgstr "右下"
+
+msgid "Lower Left"
+msgstr "左下"
+
+msgid "Occlusal"
+msgstr "咬合面"
+
+msgid "Mesial"
+msgstr "近中面"
+
+msgid "Distal"
+msgstr "远中面"
+
+msgid "Buccal"
+msgstr "颊面"
+
+msgid "Lingual"
+msgstr "舌面"
+
+msgid "Dental Treatment / Service Catalog"
+msgstr "牙科治疗项目目录"
+
+msgid "Treatment"
+msgstr "治疗项目"
+
+msgid "Code"
+msgstr "编码"
+
+msgid "Category"
+msgstr "类别"
+
+msgid "Default Duration (h)"
+msgstr "默认时长（小时）"
+
+msgid "Standard Price"
+msgstr "标准价格"
+
+msgid "Linked Product/Service"
+msgstr "关联产品 / 服务"
+
+msgid "Preventive"
+msgstr "预防治疗"
+
+msgid "Restorative"
+msgstr "修复治疗"
+
+msgid "Endodontic"
+msgstr "牙体牙髓治疗"
+
+msgid "Periodontic"
+msgstr "牙周治疗"
+
+msgid "Prosthetic"
+msgstr "修复义齿"
+
+msgid "Orthodontic"
+msgstr "正畸治疗"
+
+msgid "Surgical"
+msgstr "外科治疗"
+
+msgid "Cosmetic"
+msgstr "美容治疗"
+
+msgid "Diagnostic"
+msgstr "诊断检查"
+
+msgid "General Dentistry"
+msgstr "综合牙科"
+
+msgid "Orthodontics"
+msgstr "正畸科"
+
+msgid "Endodontics"
+msgstr "牙体牙髓科"
+
+msgid "Periodontics"
+msgstr "牙周科"
+
+msgid "Prosthodontics"
+msgstr "修复科"
+
+msgid "Pediatric Dentistry"
+msgstr "儿童牙科"
+
+msgid "Oral Surgery"
+msgstr "口腔外科"
+
+msgid "Implantology"
+msgstr "口腔种植"
+
+msgid "Dental Hygienist"
+msgstr "口腔洁治师"
+
+msgid "Speciality"
+msgstr "专科"
+
+msgid "License Number"
+msgstr "执业证号"
+
+msgid "Calendar Color"
+msgstr "日历颜色"
+
+msgid "Related User"
+msgstr "关联用户"
+
+msgid "Equipment"
+msgstr "设备"
+
+msgid "Sequence"
+msgstr "顺序"
+
+msgid "Description"
+msgstr "说明"
+
+msgid "Disease"
+msgstr "疾病"
+
+msgid "Surgery"
+msgstr "手术"
+
+msgid "Allergy"
+msgstr "过敏"
+
+msgid "Medication"
+msgstr "用药"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Title"
+msgstr "标题"
+
+msgid "Medicine"
+msgstr "药品"
+
+msgid "Medicine Name"
+msgstr "药品名称"
+
+msgid "Dosage"
+msgstr "剂量"
+
+msgid "Frequency"
+msgstr "用药频次"
+
+msgid "Quantity"
+msgstr "数量"
+
+msgid "Instructions"
+msgstr "用法说明"
+
+msgid "Diagnosis"
+msgstr "诊断"
+
+msgid "Advice / Posology"
+msgstr "医嘱 / 用法"
+
+msgid "Disc. %"
+msgstr "折扣 %"
+
+msgid "Subtotal"
+msgstr "小计"
+
+msgid "Scheduled Date"
+msgstr "计划日期"
+
+msgid "Invoiced"
+msgstr "已开票"
+
+msgid "Invoice"
+msgstr "发票"
+
+msgid "Invoice Date"
+msgstr "发票日期"
+
+msgid "Journal"
+msgstr "日记账"
+
+msgid "No patient invoices yet."
+msgstr "暂无患者发票。"
+
+msgid "Invoices are created from confirmed treatment plans."
+msgstr "确认治疗计划后可创建发票。"
+
+msgid "Add at least one treatment line."
+msgstr "请至少添加一条治疗项目。"
+
+msgid "No lines selected to invoice."
+msgstr "没有选择待开票项目。"
+
+msgid "Patient has no related contact."
+msgstr "患者尚未关联联系人。"
+
+msgid "Treatment \"%s\" has no linked product."
+msgstr "治疗项目“%s”尚未关联产品。"
+
+msgid "Practitioner %(name)s already has an appointment in this time slot (%(other)s)."
+msgstr "牙医 %(name)s 在此时段已有预约（%(other)s）。"
+
+msgid "End must be after start."
+msgstr "结束时间必须晚于开始时间。"
+
+msgid "A tooth number must be unique per patient."
+msgstr "同一患者的牙位编号不能重复。"
+
+msgid "Patient code must be unique!"
+msgstr "患者编号必须唯一！"
+
+msgid "New"
+msgstr "新建"
+
+msgid "Upper Right Central Incisor"
+msgstr "右上中切牙"
+
+msgid "Upper Right Lateral Incisor"
+msgstr "右上侧切牙"
+
+msgid "Upper Right Canine"
+msgstr "右上尖牙"
+
+msgid "Upper Right First Premolar"
+msgstr "右上第一前磨牙"
+
+msgid "Upper Right Second Premolar"
+msgstr "右上第二前磨牙"
+
+msgid "Upper Right First Molar"
+msgstr "右上第一磨牙"
+
+msgid "Upper Right Second Molar"
+msgstr "右上第二磨牙"
+
+msgid "Upper Right Third Molar"
+msgstr "右上第三磨牙"
+
+msgid "Upper Left Central Incisor"
+msgstr "左上中切牙"
+
+msgid "Upper Left Lateral Incisor"
+msgstr "左上侧切牙"
+
+msgid "Upper Left Canine"
+msgstr "左上尖牙"
+
+msgid "Upper Left First Premolar"
+msgstr "左上第一前磨牙"
+
+msgid "Upper Left Second Premolar"
+msgstr "左上第二前磨牙"
+
+msgid "Upper Left First Molar"
+msgstr "左上第一磨牙"
+
+msgid "Upper Left Second Molar"
+msgstr "左上第二磨牙"
+
+msgid "Upper Left Third Molar"
+msgstr "左上第三磨牙"
+
+msgid "Lower Left Central Incisor"
+msgstr "左下中切牙"
+
+msgid "Lower Left Lateral Incisor"
+msgstr "左下侧切牙"
+
+msgid "Lower Left Canine"
+msgstr "左下尖牙"
+
+msgid "Lower Left First Premolar"
+msgstr "左下第一前磨牙"
+
+msgid "Lower Left Second Premolar"
+msgstr "左下第二前磨牙"
+
+msgid "Lower Left First Molar"
+msgstr "左下第一磨牙"
+
+msgid "Lower Left Second Molar"
+msgstr "左下第二磨牙"
+
+msgid "Lower Left Third Molar"
+msgstr "左下第三磨牙"
+
+msgid "Lower Right Central Incisor"
+msgstr "右下中切牙"
+
+msgid "Lower Right Lateral Incisor"
+msgstr "右下侧切牙"
+
+msgid "Lower Right Canine"
+msgstr "右下尖牙"
+
+msgid "Lower Right First Premolar"
+msgstr "右下第一前磨牙"
+
+msgid "Lower Right Second Premolar"
+msgstr "右下第二前磨牙"
+
+msgid "Lower Right First Molar"
+msgstr "右下第一磨牙"
+
+msgid "Lower Right Second Molar"
+msgstr "右下第二磨牙"
+
+msgid "Lower Right Third Molar"
+msgstr "右下第三磨牙"
+
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Identity"
+msgstr "基本信息"
+
+msgid "Contact"
+msgstr "联系信息"
+
+msgid "Marital Status"
+msgstr "婚姻状况"
+
+msgid "Medical Info"
+msgstr "病历信息"
+
+msgid "Kind"
+msgstr "类型"
+
+msgid "Last Treatment Date"
+msgstr "最近治疗日期"
+
+msgid "Quadrant"
+msgstr "牙区"
+
+msgid "Zip"
+msgstr "邮编"
+
+msgid "Country"
+msgstr "国家 / 地区"
+
+msgid "Age:"
+msgstr "年龄："
+
+msgid "Plans"
+msgstr "治疗计划"
+
+msgid "Rx"
+msgstr "处方"
+
+msgid "Smoker"
+msgstr "吸烟者"
+
+msgid "Pregnant"
+msgstr "怀孕"
+
+msgid "Invoices"
+msgstr "发票"

@@ -46,12 +46,6 @@
               parent="menu_dental_appointments_top"
               sequence="10"
               action="action_dental_appointment"/>
-    <menuitem id="menu_dental_appointments_today"
-              name="Today"
-              parent="menu_dental_appointments_top"
-              sequence="20"
-              action="action_dental_appointment_today"/>
-
     <menuitem id="menu_dental_clinical_top"
               name="Clinical"
               parent="menu_dental_root"
@@ -73,12 +67,6 @@
               parent="menu_dental_root"
               sequence="40"
               groups="group_dental_user,group_dental_manager"/>
-    <menuitem id="menu_dental_invoices"
-              name="Patient Invoices"
-              parent="menu_dental_billing_top"
-              sequence="1"
-              action="action_dental_invoices"/>
-
     <menuitem id="menu_dental_config"
               name="Configuration"
               parent="menu_dental_root"
@@ -121,4 +109,16 @@
                               ('start','&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]</field>
         <field name="context">{'search_default_today':1}</field>
     </record>
+
+    <menuitem id="menu_dental_appointments_today"
+              name="Today"
+              parent="menu_dental_appointments_top"
+              sequence="20"
+              action="action_dental_appointment_today"/>
+
+    <menuitem id="menu_dental_invoices"
+              name="Patient Invoices"
+              parent="menu_dental_billing_top"
+              sequence="1"
+              action="action_dental_invoices"/>
 </odoo>
