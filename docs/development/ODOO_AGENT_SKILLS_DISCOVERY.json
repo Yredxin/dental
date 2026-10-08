@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "date": "2026-10-08",
+  "method": "Fresh codex app-server process, initialize then skills/list(cwds=[Dental], forceReload=true)",
+  "initialization": {
+    "userAgent": "Codex Desktop/0.138.0 (Windows 10.0.26200; x86_64) dumb (skill-foundation-01-verifier; 1.0)",
+    "codexHome": "C:\\Users\\Yredx\\.codex",
+    "platformFamily": "windows",
+    "platformOs": "windows"
+  },
+  "cwd": "D:\\Code\\odoo\\dental",
+  "skills": [
+    {
+      "name": "odoo-guidelines",
+      "description": "House rules for Odoo addon code: module structure, manifest, Python/ORM, fields, controllers, XML views and data, QWeb reports, access rights and record rules, performance, tests. Use when writing or reviewing any file in an Odoo addon outside static/ (for the JavaScript, Owl templates and SCSS under static/, see odoo-web-guidelines).",
+      "path": "D:\\Code\\odoo\\dental\\.agents\\skills\\odoo-guidelines\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "odoo-review",
+      "description": "Review Odoo addon code against the house rules, dispatching each changed file to the matching odoo-guidelines, odoo-web-guidelines, and odoo-security material. Use when reviewing a diff, commit, PR, or module.",
+      "path": "D:\\Code\\odoo\\dental\\.agents\\skills\\odoo-review\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "odoo-security",
+      "description": "Security audit of Odoo addon code: access control (ir.access, field groups, sudo), injection (SQL, domain, eval, XSS via Markup/markup()), untrusted public methods/RPC, controller auth/CSRF, file access, deserialization, returning complex objects, getattr/setattr, timing attacks. Use when auditing an addon, or judging whether a specific construct (a sudo, raw SQL, a route, ...) is safe.",
+      "path": "D:\\Code\\odoo\\dental\\.agents\\skills\\odoo-security\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "odoo-web-guidelines",
+      "description": "House rules for the web framework code of Odoo addons: the JavaScript, Owl templates and SCSS in static/src/ and static/tests/ of any addon (community, enterprise, or custom). Use when writing, reviewing, or moving files under static/ in an Odoo addon.",
+      "path": "D:\\Code\\odoo\\dental\\.agents\\skills\\odoo-web-guidelines\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "sd-odoo-dental",
+      "description": "Apply SD Dental reuse-first architecture policy when assessing, designing, implementing, or reviewing features in the maintained Odoo 20 dental_clinic and SD addons. Require a source-backed reuse audit before feature implementation.",
+      "path": "D:\\Code\\odoo\\dental\\.agents\\skills\\sd-odoo-dental\\SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    }
+  ],
+  "errors": []
+}

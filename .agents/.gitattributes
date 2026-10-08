@@ -1,0 +1,2 @@
+# Preserve vendored skill bytes across Windows checkouts.
+skills/** -text

@@ -1,0 +1,125 @@
+{
+  "source_repository": "https://github.com/Yredxin/odoo.git",
+  "source_branch": "20.0",
+  "source_commit": "f0c5a9b42f544e7f18dc6c8e1c93b957837e0bcb",
+  "source_directory": "skills/",
+  "copy_date": "2026-10-08",
+  "destination": ".agents/skills/",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "4c1a9d4dbdadd25dbdab57101cabdd4e9f53c0128403a3ef158cf34e56ae214b",
+      "git_blob": "331e664b025a569ad5f0496fd6f345fc6038e4f5"
+    },
+    {
+      "path": "odoo-guidelines/AUTHORING.md",
+      "sha256": "75f923c0b4d914924e5f0a287e85633d38bc425f2461225f64d44568db194eee",
+      "git_blob": "2ae776a9fc3953d5c96519650fba506d60204974"
+    },
+    {
+      "path": "odoo-guidelines/SKILL.md",
+      "sha256": "51dfc9fcb03eca177462d92e75ca9827b58736773b035bcacd912b9b1a2a431f",
+      "git_blob": "6128068e8aea05cfd458446799377e0cee414ee1"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/comments.md",
+      "sha256": "d3e311b54ab142e6f5592523ff9ae8706298a8910195057dced2acadc037b8fe",
+      "git_blob": "014369d23b2fda5763023be887d3a8f4198b24f4"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/controllers.md",
+      "sha256": "5f1248321ee0b6ca3d032aeb57be91c67671fa18c3e92e43e70ab339177d9cf5",
+      "git_blob": "713c5f5241d38bbd0f52d2bdf9f2886ea0f0e1f5"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/fields.md",
+      "sha256": "e009bac1d87ea7bcec98ba89fc552249740648e1a779a30418137fcd0b640def",
+      "git_blob": "2f807317b596c21b48a17ccf8f2ec7b45b018376"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/manifest.md",
+      "sha256": "a1e8b34dc2ef86ffe93954ef385eb2271c2c9cc910cd9ffae157117b2b70243d",
+      "git_blob": "5a26f41b56c03c78589c6b46f5d03ffb80c84f5d"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/module_structure.md",
+      "sha256": "e464429d5edf9277c7ce0778c46cae391c3575d4e825caaae0b582d281e3e931",
+      "git_blob": "6ea9c4afc6bcd9b1635e9be46c8b3e0905eae010"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/orm.md",
+      "sha256": "2616aa143c430ab7d7eb3f9c6dcd349f3246c191efa066c31134135c90f0ff41",
+      "git_blob": "670c9f519eba42a8d919bf7ef5803444a9b522ed"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/performance.md",
+      "sha256": "dde92476b14203d3e9f473903e6012b623b7b359f16076e7638d9b5088eb046e",
+      "git_blob": "2585b7707923abfa79ff6df800f6eb3c4640fc6e"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/python.md",
+      "sha256": "3e8f1ac31fea310473e5f0cc8e4c02e9ee68111fe95029cf642df8776a9a6b5c",
+      "git_blob": "6d52eb3ca0b3a2455d5c453b536af4140cc23e06"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/reports.md",
+      "sha256": "5428d86d9290cce418768364569a6b4edd200da28eb03a798918ddd8893c18dd",
+      "git_blob": "b561d148a3b71fd8cecd0a83d7c49b123a5b4919"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/security.md",
+      "sha256": "bc526fa35766f76e0683226a5193f54f3e4997d23df02b136fc24ae371e341cc",
+      "git_blob": "b6920989e67b7df747c1bbeeb08278d8ebd46773"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/stable.md",
+      "sha256": "a951fe005ab59ce4cc119ff3e29e6f7a11fc08e6a9067641ead03d095bd9a1e1",
+      "git_blob": "dc5343ed97dea5109decc5f916bd43751bdd7990"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/tests.md",
+      "sha256": "437e62ccea89da5461eb9eb0c738fed1b2e276fbe20c83a141969cffcf39d2a3",
+      "git_blob": "3f999dc011d8400d0204695a49a56181e15908e6"
+    },
+    {
+      "path": "odoo-guidelines/guidelines/xml.md",
+      "sha256": "680b80be7dfab2fcaf35b1c313ddcb5ae0b3effcd70dd464abe6bafaf4f6aaef",
+      "git_blob": "3f5ca59325297f153b5a12ce959ddaff0d15e844"
+    },
+    {
+      "path": "odoo-review/SKILL.md",
+      "sha256": "572212848b0b1ed223ee4a7ac321c43ec55509e74e7e08815a5dcc96a7344588",
+      "git_blob": "733912977b536b260db1dab73203380dd441a147"
+    },
+    {
+      "path": "odoo-security/SKILL.md",
+      "sha256": "0a54428f48287c9d6aebc6d8ce3cc18df4feedfb3f2640b884c5e0858f4be0fa",
+      "git_blob": "602f254077c246ead23bf4235409d606427be23c"
+    },
+    {
+      "path": "odoo-web-guidelines/AUTHORING.md",
+      "sha256": "fdd8e26bfff866208965f9e8348f8edab97ddd2ffe90f33c8718de9d66b16817",
+      "git_blob": "fb4ac7bd9173f3e843c3eeba8dcc3c36cec8c5ab"
+    },
+    {
+      "path": "odoo-web-guidelines/SKILL.md",
+      "sha256": "496f7475b22cdf9be5f4b473c6b641bc4064691fcfe288f01e3ecfd567c5ea91",
+      "git_blob": "0941a9660ea2344891db5abd230ea0f53068bdfa"
+    },
+    {
+      "path": "odoo-web-guidelines/guidelines/assets.md",
+      "sha256": "005f480712e0ce3963f6d52ddb1197dd82bac2ff49163f8accc09d0f105758b6",
+      "git_blob": "b3b8d6aa59cdb6314da2349b423df61cdcbf54c0"
+    },
+    {
+      "path": "odoo-web-guidelines/guidelines/javascript.md",
+      "sha256": "7a79794ae9ee82dc616a39b5a5805c77127162ff772fa5a01a08d040f23a3a36",
+      "git_blob": "d0862cb914fa9fb8cbe7ab46c18922a152772fcb"
+    },
+    {
+      "path": "odoo-web-guidelines/guidelines/scss.md",
+      "sha256": "9e8e21dabe627dfa43a0d114c066df38846ac5f2c4d64f6c0a7bfb035b536733",
+      "git_blob": "fea625f17cd562a9c4a80620c8743dce88c174ea"
+    }
+  ]
+}
