@@ -42,9 +42,7 @@ class DentalAppointment(models.Model):
 
     company_id = fields.Many2one('res.company', default=lambda s: s.env.company)
 
-    _sql_constraints = [
-        ('check_dates', 'CHECK(stop >= start)', 'End must be after start.'),
-    ]
+    _check_dates = models.Constraint('CHECK(stop >= start)', 'End must be after start.')
 
     def _expand_states(self, states, domain):
         return [k for k, _v in self._fields['state'].selection]

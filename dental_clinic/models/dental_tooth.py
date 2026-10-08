@@ -33,10 +33,9 @@ class DentalTooth(models.Model):
     notes = fields.Text()
     last_treatment_date = fields.Date()
 
-    _sql_constraints = [
-        ('tooth_uniq', 'unique(patient_id, tooth_number)',
-         'A tooth number must be unique per patient.'),
-    ]
+    _tooth_uniq = models.Constraint(
+        'UNIQUE(patient_id, tooth_number)', 'A tooth number must be unique per patient.'
+    )
 
     @api.depends('tooth_number')
     def _compute_quadrant(self):

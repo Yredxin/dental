@@ -12,14 +12,14 @@
                     <field name="journal_id"/>
                 </group>
                 <field name="line_ids">
-                    <tree>
+                    <list>
                         <field name="treatment_id"/>
                         <field name="tooth_id"/>
                         <field name="quantity"/>
                         <field name="price_unit"/>
                         <field name="discount"/>
                         <field name="subtotal"/>
-                    </tree>
+                    </list>
                 </field>
                 <footer>
                     <button string="Create Invoice" type="object" name="action_create_invoice"

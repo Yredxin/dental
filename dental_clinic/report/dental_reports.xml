@@ -5,7 +5,7 @@
         <field name="model">dental.prescription</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">dental_clinic.report_dental_prescription</field>
-        <field name="report_file">dental_clinic.report_dental_prescription</field>
+
         <field name="binding_model_id" ref="model_dental_prescription"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="paperformat_dental_a4"/>
@@ -16,7 +16,7 @@
         <field name="model">dental.treatment.plan</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">dental_clinic.report_dental_treatment_plan</field>
-        <field name="report_file">dental_clinic.report_dental_treatment_plan</field>
+
         <field name="binding_model_id" ref="model_dental_treatment_plan"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="paperformat_dental_a4"/>
@@ -27,7 +27,7 @@
         <field name="model">dental.patient</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">dental_clinic.report_dental_patient_card</field>
-        <field name="report_file">dental_clinic.report_dental_patient_card</field>
+
         <field name="binding_model_id" ref="model_dental_patient"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="paperformat_dental_a4"/>

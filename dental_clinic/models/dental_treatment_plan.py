@@ -86,6 +86,6 @@ class DentalTreatmentPlan(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Invoices'),
             'res_model': 'account.move',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'domain': [('id', 'in', self.invoice_ids.ids)],
         }

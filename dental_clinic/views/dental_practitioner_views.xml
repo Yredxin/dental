@@ -4,14 +4,14 @@
         <field name="name">dental.practitioner.tree</field>
         <field name="model">dental.practitioner</field>
         <field name="arch" type="xml">
-            <tree string="Practitioners">
+            <list string="Practitioners">
                 <field name="name"/>
                 <field name="speciality"/>
                 <field name="license_number"/>
                 <field name="phone"/>
                 <field name="email"/>
                 <field name="appointment_count"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="view_dental_practitioner_form" model="ir.ui.view">
@@ -39,16 +39,13 @@
                     </group>
                     <field name="notes" placeholder="Notes..."/>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="message_ids"/>
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
     <record id="action_dental_practitioner" model="ir.actions.act_window">
         <field name="name">Practitioners</field>
         <field name="res_model">dental.practitioner</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>

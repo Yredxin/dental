@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Dental Clinic Management',
-    'version': '17.0.1.0.0',
+    'version': '20.0.1.0.0',
     'category': 'Healthcare',
     'summary': 'Complete dental clinic management: patients, appointments, treatments, odontogram, prescriptions, billing.',
     'description': """
-Dental Clinic Management for Odoo 17
+Dental Clinic Management for Odoo 20
 =====================================
 Features:
   * Patient files with medical history and allergies
@@ -32,7 +32,7 @@ Features:
     'data': [
         # 1) Security
         'security/dental_security.xml',
-        'security/ir.model.access.csv',
+        'security/ir.access.csv',
         # 2) Master / configuration data
         'data/ir_sequence_data.xml',
         'data/dental_tooth_data.xml',

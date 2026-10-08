@@ -4,13 +4,13 @@
         <field name="name">dental.prescription.tree</field>
         <field name="model">dental.prescription</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="patient_id"/>
                 <field name="practitioner_id"/>
                 <field name="date"/>
                 <field name="state"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="view_dental_prescription_form" model="ir.ui.view">
@@ -47,7 +47,7 @@
                         </page>
                         <page string="Medications">
                             <field name="line_ids">
-                                <tree editable="bottom">
+                                <list editable="bottom">
                                     <field name="sequence" widget="handle"/>
                                     <field name="name"/>
                                     <field name="product_id"/>
@@ -56,7 +56,7 @@
                                     <field name="duration"/>
                                     <field name="quantity"/>
                                     <field name="instructions"/>
-                                </tree>
+                                </list>
                             </field>
                         </page>
                         <page string="Advice">
@@ -64,17 +64,13 @@
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
     <record id="action_dental_prescription" model="ir.actions.act_window">
         <field name="name">Prescriptions</field>
         <field name="res_model">dental.prescription</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>

@@ -4,13 +4,13 @@
         <field name="name">dental.room.tree</field>
         <field name="model">dental.room</field>
         <field name="arch" type="xml">
-            <tree string="Rooms" editable="bottom">
+            <list string="Rooms" editable="bottom">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="code"/>
                 <field name="description"/>
                 <field name="active"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="view_dental_room_form" model="ir.ui.view">
@@ -36,6 +36,6 @@
     <record id="action_dental_room" model="ir.actions.act_window">
         <field name="name">Rooms / Chairs</field>
         <field name="res_model">dental.room</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>

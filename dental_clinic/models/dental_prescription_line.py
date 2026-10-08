@@ -10,7 +10,7 @@ class DentalPrescriptionLine(models.Model):
     sequence = fields.Integer(default=10)
     prescription_id = fields.Many2one('dental.prescription', required=True, ondelete='cascade')
     product_id = fields.Many2one('product.product', string='Medicine',
-                                 domain=[('type', 'in', ('product', 'consu'))])
+                                 domain=[('type', '=', 'consu')])
     name = fields.Char(string='Medicine Name', required=True)
     dosage = fields.Char(help='e.g. 500mg')
     frequency = fields.Char(help='e.g. 3 times a day')

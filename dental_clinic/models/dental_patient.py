@@ -72,9 +72,7 @@ class DentalPatient(models.Model):
     currency_id = fields.Many2one('res.currency', default=lambda s: s.env.company.currency_id)
     active = fields.Boolean(default=True)
 
-    _sql_constraints = [
-        ('code_uniq', 'unique(code)', 'Patient code must be unique!'),
-    ]
+    _code_uniq = models.Constraint('UNIQUE(code)', 'Patient code must be unique!')
 
     @api.depends('name', 'code')
     def _compute_display_name_full(self):
@@ -138,7 +136,7 @@ class DentalPatient(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Appointments'),
             'res_model': 'dental.appointment',
-            'view_mode': 'calendar,tree,form',
+            'view_mode': 'calendar,list,form',
             'domain': [('patient_id', '=', self.id)],
             'context': {'default_patient_id': self.id},
         }
@@ -149,7 +147,7 @@ class DentalPatient(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Treatment Plans'),
             'res_model': 'dental.treatment.plan',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'domain': [('patient_id', '=', self.id)],
             'context': {'default_patient_id': self.id},
         }
@@ -160,7 +158,7 @@ class DentalPatient(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Prescriptions'),
             'res_model': 'dental.prescription',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'domain': [('patient_id', '=', self.id)],
             'context': {'default_patient_id': self.id},
         }
@@ -171,7 +169,7 @@ class DentalPatient(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Invoices'),
             'res_model': 'account.move',
-            'view_mode': 'tree,form',
+            'view_mode': 'list,form',
             'domain': [('dental_patient_id', '=', self.id), ('move_type', '=', 'out_invoice')],
             'context': {'default_move_type': 'out_invoice', 'default_dental_patient_id': self.id},
         }

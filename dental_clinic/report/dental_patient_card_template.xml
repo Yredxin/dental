@@ -7,20 +7,20 @@
                     <div class="page">
                         <h2>Patient Card</h2>
                         <table class="table table-sm">
-                            <tr><th>Code</th><td t-field="o.code"/></tr>
-                            <tr><th>Name</th><td t-field="o.name"/></tr>
-                            <tr><th>Date of Birth</th><td t-field="o.birth_date"/></tr>
-                            <tr><th>Gender</th><td t-field="o.gender"/></tr>
-                            <tr><th>Blood Type</th><td t-field="o.blood_type"/></tr>
-                            <tr><th>Phone</th><td t-field="o.phone"/></tr>
-                            <tr><th>Mobile</th><td t-field="o.mobile"/></tr>
-                            <tr><th>Email</th><td t-field="o.email"/></tr>
+                            <tr><th>Code</th><td><span t-field="o.code"/></td></tr>
+                            <tr><th>Name</th><td><span t-field="o.name"/></td></tr>
+                            <tr><th>Date of Birth</th><td><span t-field="o.birth_date"/></td></tr>
+                            <tr><th>Gender</th><td><span t-field="o.gender"/></td></tr>
+                            <tr><th>Blood Type</th><td><span t-field="o.blood_type"/></td></tr>
+                            <tr><th>Phone</th><td><span t-field="o.phone"/></td></tr>
+                            <tr><th>Mobile</th><td><span t-field="o.mobile"/></td></tr>
+                            <tr><th>Email</th><td><span t-field="o.email"/></td></tr>
                             <tr><th>Address</th><td>
                                 <span t-field="o.street"/>, <span t-field="o.city"/>
                                 <span t-field="o.zip"/> <span t-field="o.country_id.name"/></td></tr>
-                            <tr><th>Allergies</th><td t-field="o.allergies"/></tr>
-                            <tr><th>Chronic Diseases</th><td t-field="o.chronic_diseases"/></tr>
-                            <tr><th>Medications</th><td t-field="o.current_medications"/></tr>
+                            <tr><th>Allergies</th><td><span t-field="o.allergies"/></td></tr>
+                            <tr><th>Chronic Diseases</th><td><span t-field="o.chronic_diseases"/></td></tr>
+                            <tr><th>Medications</th><td><span t-field="o.current_medications"/></td></tr>
                             <tr><th>Emergency</th>
                                 <td><span t-field="o.emergency_name"/>
                                     (<span t-field="o.emergency_relation"/>) -
@@ -34,12 +34,12 @@
                             </thead>
                             <tbody>
                                 <tr t-foreach="o.tooth_ids" t-as="t">
-                                    <td t-field="t.tooth_number"/>
-                                    <td t-field="t.name"/>
-                                    <td t-field="t.quadrant"/>
-                                    <td t-field="t.condition"/>
-                                    <td t-field="t.surface"/>
-                                    <td t-field="t.last_treatment_date"/>
+                                    <td><span t-field="t.tooth_number"/></td>
+                                    <td><span t-field="t.name"/></td>
+                                    <td><span t-field="t.quadrant"/></td>
+                                    <td><span t-field="t.condition"/></td>
+                                    <td><span t-field="t.surface"/></td>
+                                    <td><span t-field="t.last_treatment_date"/></td>
                                 </tr>
                             </tbody>
                         </table>

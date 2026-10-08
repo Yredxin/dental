@@ -4,7 +4,7 @@
         <field name="name">dental.treatment.tree</field>
         <field name="model">dental.treatment</field>
         <field name="arch" type="xml">
-            <tree string="Treatments">
+            <list string="Treatments">
                 <field name="code"/>
                 <field name="name"/>
                 <field name="category"/>
@@ -12,7 +12,7 @@
                 <field name="price"/>
                 <field name="requires_tooth"/>
                 <field name="active"/>
-            </tree>
+            </list>
         </field>
     </record>
     <record id="view_dental_treatment_form" model="ir.ui.view">
@@ -51,7 +51,7 @@
                 <field name="name"/>
                 <field name="code"/>
                 <filter name="active" string="Active" domain="[('active','=',True)]"/>
-                <group expand="0" string="Group By">
+                <group>
                     <filter name="group_cat" string="Category" context="{'group_by':'category'}"/>
                 </group>
             </search>
@@ -60,6 +60,6 @@
     <record id="action_dental_treatment" model="ir.actions.act_window">
         <field name="name">Treatments</field>
         <field name="res_model">dental.treatment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>
