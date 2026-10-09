@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sd_facility.sd_facility_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="menu_dental_config"/>
+        <field name="sequence">25</field>
+    </record>
+</odoo>

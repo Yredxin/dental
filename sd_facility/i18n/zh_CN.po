@@ -1,0 +1,400 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sd_facility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20260926\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-09 05:10+0000\n"
+"PO-Revision-Date: 2026-10-09 05:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "A facility must be a root space."
+msgstr "院址必须是空间层级的根节点。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "A floor must belong directly to a facility."
+msgstr "楼层必须直接隶属于院址。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid "A workstation must belong to an area."
+msgstr "工作位必须隶属于区域。"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__active
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__active
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_search
+msgid "Active"
+msgstr "启用"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid ""
+"Active spaces and workstations require active ancestors. Archive children "
+"first."
+msgstr "启用的空间和工作位要求所有上级空间处于启用状态。请先归档下级。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "An area must belong to a floor or another area."
+msgstr "区域必须隶属于楼层或另一个区域。"
+
+#. module: sd_facility
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_form
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_form
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_search
+msgid "Archived"
+msgstr "已归档"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__space_id
+#: model:ir.model.fields.selection,name:sd_facility.selection__sd_facility_space__type__area
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_search
+msgid "Area"
+msgstr "区域"
+
+#. module: sd_facility
+#: model:ir.actions.act_window,name:sd_facility.sd_facility_space_action_area
+#: model:ir.ui.menu,name:sd_facility.sd_facility_space_menu_area
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+msgid "Areas"
+msgstr "区域"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__code
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__code
+msgid "Code"
+msgstr "编号"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__company_id
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__company_id
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_search
+msgid "Company"
+msgstr "公司"
+
+#. module: sd_facility
+#: model:ir.module.module,summary:base.module_sd_facility
+msgid ""
+"Company-owned facilities, floors, areas and resource-backed workstations"
+msgstr "管理公司所属的院址、楼层、区域及基于资源的工作位"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__complete_name
+msgid "Complete Name"
+msgstr "完整路径"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__create_uid
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__create_date
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: sd_facility
+#: model:ir.model.fields,help:sd_facility.field_sd_facility_station__resource_calendar_id
+msgid ""
+"Define the working schedule of the resource. Assign a flexible calendar for "
+"fully flexible working hours."
+msgstr "设置资源的工作时间。如工作时间完全灵活，请选用灵活工作日历。"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__description
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__description
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_form
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_form
+msgid "Description"
+msgstr "说明"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__child_ids
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_form
+msgid "Direct Child Spaces"
+msgstr "直属下级空间"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__station_ids
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_form
+msgid "Direct Workstations"
+msgstr "直属工作位"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_resource_resource__display_name
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__display_name
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sd_facility
+#: model:ir.model.constraint,message:sd_facility.constraint_sd_facility_station_resource_unique
+msgid "Each workstation must own a different resource."
+msgstr "每个工作位必须独占一个资源。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+msgid "Existing resources cannot be converted into facility resources."
+msgstr "现有资源不能转换为设施资源。"
+
+#. module: sd_facility
+#: model:ir.actions.act_window,name:sd_facility.sd_facility_space_action_facility
+#: model:ir.module.category,name:sd_facility.module_category_facility
+#: model:ir.ui.menu,name:sd_facility.sd_facility_menu
+#: model:ir.ui.menu,name:sd_facility.sd_facility_space_menu_facility
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+msgid "Facilities"
+msgstr "诊所设施"
+
+#. module: sd_facility
+#: model:ir.model.fields.selection,name:sd_facility.selection__sd_facility_space__type__facility
+msgid "Facility"
+msgstr "院址"
+
+#. module: sd_facility
+#: model:ir.module.module,shortdesc:base.module_sd_facility
+#: model:res.groups.privilege,name:sd_facility.privilege_facility
+msgid "Facility Management"
+msgstr "设施管理"
+
+#. module: sd_facility
+#: model:res.groups,name:sd_facility.sd_facility_group_manager
+msgid "Facility Manager"
+msgstr "设施管理权限"
+
+#. module: sd_facility
+#: model:res.groups,name:sd_facility.sd_facility_group_read
+msgid "Facility Read"
+msgstr "设施只读权限"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_resource_resource__sd_facility_owned
+msgid "Facility Resource"
+msgstr "设施资源"
+
+#. module: sd_facility
+#: model:ir.model,name:sd_facility.model_sd_facility_space
+msgid "Facility Space"
+msgstr "设施空间"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+msgid "Facility resource company cannot be changed."
+msgstr "设施资源的所属公司不能更改。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+msgid "Facility resource ownership cannot be removed."
+msgstr "不能移除设施资源的归属标识。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+msgid "Facility resources must be material, company-owned and have no user."
+msgstr "设施资源必须为非人员资源，属于一家公司且不关联用户。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "Facility spaces cannot form a recursive cycle."
+msgstr "设施空间不能形成循环层级。"
+
+#. module: sd_facility
+#: model:ir.model.fields.selection,name:sd_facility.selection__sd_facility_space__type__floor
+msgid "Floor"
+msgstr "楼层"
+
+#. module: sd_facility
+#: model:ir.actions.act_window,name:sd_facility.sd_facility_space_action_floor
+#: model:ir.ui.menu,name:sd_facility.sd_facility_space_menu_floor
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+msgid "Floors"
+msgstr "楼层"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_resource_resource__id
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__id
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sd_facility
+#: model:ir.model.fields,help:sd_facility.field_sd_facility_station__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the resource "
+"record without removing it."
+msgstr "归档后将隐藏该资源记录，并保留其数据。"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__write_uid
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__write_date
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__name
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__name
+msgid "Name"
+msgstr "名称"
+
+#. module: sd_facility
+#: model:res.groups.privilege,placeholder:sd_facility.privilege_facility
+msgid "No"
+msgstr "否"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__parent_path
+msgid "Parent Path"
+msgstr "上级路径"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__parent_id
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+msgid "Parent Space"
+msgstr "上级空间"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "Parent and child spaces must belong to the same company."
+msgstr "上级和下级空间必须属于同一家公司。"
+
+#. module: sd_facility
+#: model:ir.model,name:sd_facility.model_resource_resource
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__resource_id
+msgid "Resource"
+msgstr "资源"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__sequence
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__sequence
+msgid "Sequence"
+msgstr "排序"
+
+#. module: sd_facility
+#: model:ir.model.constraint,message:sd_facility.constraint_sd_facility_space_code_unique
+msgid "Space code must be unique within its company."
+msgstr "空间编号在同一公司内不能重复。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "Space company cannot be changed. Create a new space instead."
+msgstr "空间的所属公司不能更改，请新建空间。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid ""
+"The working calendar must be shared or belong to the workstation company."
+msgstr "工作日历必须为共享日历或属于工作位的所属公司。"
+
+#. module: sd_facility
+#: model:ir.model.fields,help:sd_facility.field_sd_facility_station__tz
+msgid ""
+"This field is used in order to define in which timezone the resources will "
+"work."
+msgstr "设置资源工作时使用的时区。"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__tz
+msgid "Timezone"
+msgstr "时区"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_space__type
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
+msgid "Type"
+msgstr "类型"
+
+#. module: sd_facility
+#: model:ir.model.fields,field_description:sd_facility.field_sd_facility_station__resource_calendar_id
+#: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_station_view_search
+msgid "Working Hours"
+msgstr "工作日历"
+
+#. module: sd_facility
+#: model:ir.model,name:sd_facility.model_sd_facility_station
+msgid "Workstation"
+msgstr "工作位"
+
+#. module: sd_facility
+#: model:ir.model.constraint,message:sd_facility.constraint_sd_facility_station_code_unique
+msgid "Workstation code must be unique within its company."
+msgstr "工作位编号在同一公司内不能重复。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid ""
+"Workstation company cannot be changed. Create a new workstation instead."
+msgstr "工作位的所属公司不能更改，请新建工作位。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid "Workstation resource identity cannot be replaced."
+msgstr "工作位关联的资源不能替换。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid "Workstation, area and resource must belong to the same company."
+msgstr "工作位、区域和资源必须属于同一家公司。"
+
+#. module: sd_facility
+#: model:ir.actions.act_window,name:sd_facility.sd_facility_station_action
+#: model:ir.ui.menu,name:sd_facility.sd_facility_station_menu
+msgid "Workstations"
+msgstr "工作位"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_station.py:0
+msgid ""
+"Workstations require dedicated facility material resources without a user."
+msgstr "工作位必须使用专属设施非人员资源，且不能关联用户。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/sd_facility_space.py:0
+msgid "The space hierarchy path is managed by Odoo."
+msgstr "空间层级路径由 Odoo 自动维护。"
+
+#. module: sd_facility
+#. odoo-python
+#: code:addons/sd_facility/models/resource_resource.py:0
+msgid "Facility Manager permission is required for facility resources."
+msgstr "管理设施资源需要设施管理权限。"

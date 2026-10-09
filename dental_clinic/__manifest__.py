@@ -30,6 +30,7 @@ Features:
         'calendar',
         # Native public employee directory / HR Officer authority.
         'hr',
+        'sd_facility',
         # Direct user-menu registry dependency and asset load ordering.
         'mysubscription',
         # Direct menu reference; account already auto-installs its dashboards.
@@ -38,6 +39,7 @@ Features:
     'data': [
         # 1) Security
         'security/dental_security.xml',
+        'security/dental_facility_security.xml',
         'security/ir.access.csv',
         # 2) Master / configuration data
         'data/ir_sequence_data.xml',
@@ -66,6 +68,7 @@ Features:
         'views/res_users_views.xml',
         # 5) Menus LAST (they reference actions defined above)
         'views/dental_menus.xml',
+        'views/dental_facility_menus.xml',
     ],
     'demo': [
         'demo/dental_demo.xml',

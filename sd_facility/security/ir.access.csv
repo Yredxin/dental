@@ -1,0 +1,8 @@
+id,name,model_id,group_id/id,operation,domain
+space_read,Facility spaces read,sd.facility.space,sd_facility_group_read,r,
+space_manager,Facility spaces manage,sd.facility.space,sd_facility_group_manager,cru,
+space_company,Facility spaces company,sd.facility.space,,crud,"[('company_id', 'in', company_ids)]"
+station_read,Workstations read,sd.facility.station,sd_facility_group_read,r,
+station_manager,Workstations manage,sd.facility.station,sd_facility_group_manager,cru,
+station_company,Workstations company,sd.facility.station,,crud,"[('company_id', 'in', company_ids)]"
+resource_manager,Facility material resources manage,resource.resource,sd_facility_group_manager,cru,"[('sd_facility_owned', '=', True), ('resource_type', '=', 'material'), ('user_id', '=', False), ('company_id', 'in', company_ids)]"
