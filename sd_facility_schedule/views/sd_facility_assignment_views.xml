@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sd_facility_assignment_view_list" model="ir.ui.view">
+        <field name="name">sd.facility.assignment.view.list</field>
+        <field name="model">sd.facility.assignment</field>
+        <field name="arch" type="xml">
+            <list delete="false">
+                <field name="employee_id" options="{'no_open': True}"/>
+                <field name="station_id" options="{'no_open': True}"/>
+                <field name="start"/>
+                <field name="stop"/>
+                <field name="assignment_type"/>
+                <field name="reason" optional="show"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+    <record id="sd_facility_assignment_view_form" model="ir.ui.view">
+        <field name="name">sd.facility.assignment.view.form</field>
+        <field name="model">sd.facility.assignment</field>
+        <field name="arch" type="xml">
+            <form delete="false">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="employee_id" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="station_id" options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="start"/>
+                            <field name="stop"/>
+                            <field name="assignment_type"/>
+                            <field name="reason" required="assignment_type == 'temporary'"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sd_facility_assignment_view_search" model="ir.ui.view">
+        <field name="name">sd.facility.assignment.view.search</field>
+        <field name="model">sd.facility.assignment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id"/>
+                <field name="station_id"/>
+                <field name="reason"/>
+                <filter name="today" string="Today" domain="[('start', '&lt;', datetime.datetime.combine(context_today() + relativedelta(days=1), datetime.time(0, 0, 0)).to_utc()), ('stop', '&gt;', datetime.datetime.combine(context_today(), datetime.time(0, 0, 0)).to_utc())]"/>
+                <filter name="next_seven_days" string="Next 7 Days" domain="[('start', '&lt;', datetime.datetime.combine(context_today() + relativedelta(days=7), datetime.time(0, 0, 0)).to_utc()), ('stop', '&gt;', datetime.datetime.combine(context_today(), datetime.time(0, 0, 0)).to_utc())]"/>
+                <separator/>
+                <filter name="my_schedule" string="My Schedule" domain="[('employee_id.user_id', '=', uid), ('company_id', '=', allowed_company_ids[0])]"/>
+                <separator/>
+                <filter name="planned" string="Planned" domain="[('assignment_type', '=', 'planned')]"/>
+                <filter name="temporary" string="Temporary" domain="[('assignment_type', '=', 'temporary')]"/>
+                <separator/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter name="group_employee" string="Employee" context="{'group_by': 'employee_id'}"/>
+                    <filter name="group_station" string="Workstation" context="{'group_by': 'station_id'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="sd_facility_assignment_action_my" model="ir.actions.act_window">
+        <field name="name">My Schedule</field>
+        <field name="res_model">sd.facility.assignment</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('employee_id.user_id', '=', uid), ('company_id', '=', allowed_company_ids[0])]</field>
+        <field name="context">{'search_default_next_seven_days': 1}</field>
+    </record>
+    <record id="sd_facility_assignment_action" model="ir.actions.act_window">
+        <field name="name">All Schedules</field>
+        <field name="res_model">sd.facility.assignment</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_next_seven_days': 1}</field>
+    </record>
+</odoo>

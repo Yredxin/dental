@@ -1,0 +1,6 @@
+id,name,model_id,group_id/id,operation,domain
+assignment_self,Own workstation assignments,sd.facility.assignment,base.group_user,r,"[('employee_id', '=', user.employee_id.id)]"
+assignment_read,Workstation assignments read,sd.facility.assignment,sd_facility_schedule_group_read,r,
+assignment_manager,Workstation assignments manage,sd.facility.assignment,sd_facility_schedule_group_manager,cru,
+assignment_company,Workstation assignments company,sd.facility.assignment,,crud,"[('company_id', 'in', company_ids)]"
+station_schedule_read,Scheduled workstations read,sd.facility.station,sd_facility_schedule_group_read,r,

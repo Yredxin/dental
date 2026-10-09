@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="privilege_facility_schedule" model="res.groups.privilege">
+        <field name="name">Workstation Scheduling</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+    <record id="sd_facility_schedule_group_read" model="res.groups">
+        <field name="name">Schedule Read</field>
+        <field name="privilege_id" ref="privilege_facility_schedule"/>
+        <field name="sequence">10</field>
+        <field name="implied_ids" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+    <record id="sd_facility_schedule_group_manager" model="res.groups">
+        <field name="name">Schedule Manager</field>
+        <field name="privilege_id" ref="privilege_facility_schedule"/>
+        <field name="sequence">20</field>
+        <field name="implied_ids" eval="[Command.link(ref('sd_facility_schedule_group_read'))]"/>
+    </record>
+    <record id="base.group_system" model="res.groups">
+        <field name="implied_ids" eval="[Command.link(ref('sd_facility_schedule_group_manager'))]"/>
+    </record>
+</odoo>

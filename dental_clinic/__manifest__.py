@@ -31,6 +31,7 @@ Features:
         # Native public employee directory / HR Officer authority.
         'hr',
         'sd_facility',
+        'sd_facility_schedule',
         # Direct user-menu registry dependency and asset load ordering.
         'mysubscription',
         # Direct menu reference; account already auto-installs its dashboards.
@@ -40,6 +41,7 @@ Features:
         # 1) Security
         'security/dental_security.xml',
         'security/dental_facility_security.xml',
+        'security/dental_schedule_security.xml',
         'security/ir.access.csv',
         # 2) Master / configuration data
         'data/ir_sequence_data.xml',

@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sd_facility_schedule
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0-20260926\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-09 05:48+0000\n"
+"PO-Revision-Date: 2026-10-09 05:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__active
+msgid "Active"
+msgstr "启用"
+
+#. module: sd_facility_schedule
+#. odoo-python
+#: code:addons/sd_facility_schedule/models/sd_facility_assignment.py:0
+msgid "Active assignments require an active workstation."
+msgstr "启用的排班要求工作位处于启用状态。"
+
+#. module: sd_facility_schedule
+#: model:ir.actions.act_window,name:sd_facility_schedule.sd_facility_assignment_action
+#: model:ir.ui.menu,name:sd_facility_schedule.sd_facility_assignment_menu
+msgid "All Schedules"
+msgstr "全部排班"
+
+#. module: sd_facility_schedule
+#: model:ir.model.constraint,message:sd_facility_schedule.constraint_sd_facility_assignment_employee_no_overlap
+msgid "An employee cannot have overlapping active assignments."
+msgstr "同一员工的启用排班时间不能重叠。"
+
+#. module: sd_facility_schedule
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_form
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Archived"
+msgstr "已归档"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__assignment_type
+msgid "Assignment Type"
+msgstr "排班类型"
+
+#. module: sd_facility_schedule
+#. odoo-python
+#: code:addons/sd_facility_schedule/models/sd_facility_assignment.py:0
+msgid "Assignment, employee and workstation must belong to the same company."
+msgstr "排班、员工和工作位必须属于同一家公司。"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__company_id
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Company"
+msgstr "公司"
+
+#. module: sd_facility_schedule
+#: model:ir.module.module,summary:base.module_sd_facility_schedule
+msgid "Concrete employee assignments to workstations"
+msgstr "按具体时间安排员工工作位"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__employee_id
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Employee"
+msgstr "员工"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__stop
+msgid "End Time"
+msgstr "结束时间"
+
+#. module: sd_facility_schedule
+#. odoo-python
+#: code:addons/sd_facility_schedule/models/sd_facility_assignment.py:0
+#: model:ir.model.constraint,message:sd_facility_schedule.constraint_sd_facility_assignment_interval_positive
+msgid "End time must be after start time."
+msgstr "结束时间必须晚于开始时间。"
+
+#. module: sd_facility_schedule
+#: model:ir.module.module,shortdesc:base.module_sd_facility_schedule
+msgid "Facility Workstation Scheduling"
+msgstr "工作位排班"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: sd_facility_schedule
+#: model:ir.actions.act_window,name:sd_facility_schedule.sd_facility_assignment_action_my
+#: model:ir.ui.menu,name:sd_facility_schedule.sd_facility_assignment_menu_my
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "My Schedule"
+msgstr "我的排班"
+
+#. module: sd_facility_schedule
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Next 7 Days"
+msgstr "未来7天"
+
+#. module: sd_facility_schedule
+#: model:res.groups.privilege,placeholder:sd_facility_schedule.privilege_facility_schedule
+msgid "No"
+msgstr "否"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields.selection,name:sd_facility_schedule.selection__sd_facility_assignment__assignment_type__planned
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Planned"
+msgstr "正式排班"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__reason
+msgid "Reason"
+msgstr "原因"
+
+#. module: sd_facility_schedule
+#: model:res.groups,name:sd_facility_schedule.sd_facility_schedule_group_manager
+msgid "Schedule Manager"
+msgstr "排班管理权限"
+
+#. module: sd_facility_schedule
+#: model:res.groups,name:sd_facility_schedule.sd_facility_schedule_group_read
+msgid "Schedule Read"
+msgstr "排班只读权限"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__start
+msgid "Start Time"
+msgstr "开始时间"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields.selection,name:sd_facility_schedule.selection__sd_facility_assignment__assignment_type__temporary
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Temporary"
+msgstr "临时排班"
+
+#. module: sd_facility_schedule
+#. odoo-python
+#: code:addons/sd_facility_schedule/models/sd_facility_assignment.py:0
+#: model:ir.model.constraint,message:sd_facility_schedule.constraint_sd_facility_assignment_temporary_reason
+msgid "Temporary assignments require a reason."
+msgstr "临时排班必须填写原因。"
+
+#. module: sd_facility_schedule
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Today"
+msgstr "今天"
+
+#. module: sd_facility_schedule
+#: model:ir.model.fields,field_description:sd_facility_schedule.field_sd_facility_assignment__station_id
+#: model_terms:ir.ui.view,arch_db:sd_facility_schedule.sd_facility_assignment_view_search
+msgid "Workstation"
+msgstr "工作位"
+
+#. module: sd_facility_schedule
+#: model:ir.model,name:sd_facility_schedule.model_sd_facility_assignment
+msgid "Workstation Assignment"
+msgstr "工作位排班"
+
+#. module: sd_facility_schedule
+#: model:ir.ui.menu,name:sd_facility_schedule.sd_facility_schedule_menu
+#: model:res.groups.privilege,name:sd_facility_schedule.privilege_facility_schedule
+msgid "Workstation Scheduling"
+msgstr "工作位排班"
