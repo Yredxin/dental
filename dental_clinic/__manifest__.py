@@ -68,6 +68,7 @@ Features:
         'views/dental_permission_profile_views.xml',
         'wizards/dental_permission_apply_views.xml',
         'views/res_users_views.xml',
+        'views/hr_employee_views.xml',
         # 5) Menus LAST (they reference actions defined above)
         'views/dental_menus.xml',
         'views/dental_facility_menus.xml',

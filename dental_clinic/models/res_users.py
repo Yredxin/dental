@@ -31,8 +31,11 @@ class ResUsers(models.Model):
     def _apply_dental_capabilities(self, levels):
         self.ensure_one()
         caller = self.env.user
-        if not self.env.su and not caller.has_group('dental_clinic.group_dental_configuration_write'):
-            raise AccessError(self.env._('Dental Configuration Read/Write is required.'))
+        if not self.env.su and not (
+                caller.has_group('dental_clinic.group_dental_configuration_write')
+                or caller.has_group('dental_clinic.group_dental_employee_write')
+                or caller.has_group('base.group_system')):
+            raise AccessError(self.env._('Dental Configuration or Employee Management Read/Write is required.'))
         if set(levels) != set(CAPABILITIES) or any(
                 level not in ('none', 'read', 'write') for level in levels.values()):
             raise ValidationError(self.env._('Only the five Dental capability levels are accepted.'))
@@ -41,6 +44,14 @@ class ResUsers(models.Model):
             raise AccessError(self.env._('Dental capabilities can only be applied to internal staff.'))
         if not self.company_ids & self.env.companies:
             raise AccessError(self.env._('The staff member must belong to an allowed company.'))
+        if (not self.env.su and not caller.has_group('base.group_system')
+                and not caller.has_group('dental_clinic.group_dental_configuration_write')):
+            # Employee-only managers act on accessible linked employees, never
+            # gain a general user administration boundary through this helper.
+            employees = self.env['hr.employee'].search([('user_id', '=', self.id)])
+            if not employees:
+                raise AccessError(self.env._('The user must have an accessible linked employee.'))
+            employees.check_access('write')
         if (not self.env.su and not caller.has_group('base.group_system')
                 and self.has_group('base.group_system')):
             raise AccessError(self.env._('Only a System Administrator may adjust another System Administrator.'))

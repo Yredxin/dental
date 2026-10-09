@@ -13,6 +13,6 @@
         'views/sd_facility_station_views.xml',
         'views/sd_facility_menus.xml',
     ],
-    'application': False,
+    'application': True,
     'installable': True,
 }

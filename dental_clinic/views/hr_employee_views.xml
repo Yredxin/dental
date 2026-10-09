@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_form_work_permissions" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.dental.work.permissions</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="before">
+                <page name="dental_work_permissions" string="Work Permissions"
+                      groups="dental_clinic.group_dental_employee_write,base.group_system">
+                    <field name="dental_has_internal_user" invisible="1"/>
+                    <div class="alert alert-info" role="status" invisible="user_id">
+                        This employee has no system login account. Work permissions only apply to employees with a login account.
+                    </div>
+                    <div class="alert alert-info" role="status" invisible="not user_id or dental_has_internal_user">
+                        Work permissions require an internal login account.
+                    </div>
+                    <div invisible="not dental_has_internal_user">
+                        <group string="Linked Account" name="dental_linked_account">
+                            <field name="user_id" readonly="1" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="dental_user_login"/>
+                        </group>
+                        <group string="Permission Profile" name="dental_permission_preset">
+                            <label for="dental_permission_profile_id"/>
+                            <div class="d-flex align-items-center gap-2">
+                                <field name="dental_permission_profile_id" options="{'no_create': True, 'no_open': True}"/>
+                                <button name="action_apply_dental_profile" type="object" string="Apply Profile"
+                                        class="btn-primary" invisible="not id or not dental_permission_profile_id"
+                                        context="{'dental_permission_profile_id': dental_permission_profile_id}"/>
+                            </div>
+                        </group>
+                        <p class="text-muted">Applying a profile saves permissions immediately. It is a one-time preset. You may then customize individual capabilities and save. Later profile changes do not affect this account.</p>
+                        <group string="Capability Configuration" name="dental_capabilities">
+                            <field name="dental_patient_level" widget="radio" options="{'horizontal': True}"/>
+                            <field name="dental_appointment_level" widget="radio" options="{'horizontal': True}"/>
+                            <field name="dental_clinical_level" widget="radio" options="{'horizontal': True}"/>
+                            <field name="dental_employee_level" widget="radio" options="{'horizontal': True}"/>
+                            <field name="dental_configuration_level" widget="radio" options="{'horizontal': True}"/>
+                        </group>
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

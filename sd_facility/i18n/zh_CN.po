@@ -163,11 +163,10 @@ msgstr "现有资源不能转换为设施资源。"
 #. module: sd_facility
 #: model:ir.actions.act_window,name:sd_facility.sd_facility_space_action_facility
 #: model:ir.module.category,name:sd_facility.module_category_facility
-#: model:ir.ui.menu,name:sd_facility.sd_facility_menu
 #: model:ir.ui.menu,name:sd_facility.sd_facility_space_menu_facility
 #: model_terms:ir.ui.view,arch_db:sd_facility.sd_facility_space_view_search
 msgid "Facilities"
-msgstr "诊所设施"
+msgstr "院址"
 
 #. module: sd_facility
 #: model:ir.model.fields.selection,name:sd_facility.selection__sd_facility_space__type__facility
@@ -398,3 +397,8 @@ msgstr "空间层级路径由 Odoo 自动维护。"
 #: code:addons/sd_facility/models/resource_resource.py:0
 msgid "Facility Manager permission is required for facility resources."
 msgstr "管理设施资源需要设施管理权限。"
+
+#. module: sd_facility
+#: model:ir.ui.menu,name:sd_facility.sd_facility_menu
+msgid "Space"
+msgstr "空间"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="sd_facility_menu" name="Facilities" sequence="30" groups="sd_facility_group_read"/>
+    <menuitem id="sd_facility_menu" name="Space" sequence="52" groups="sd_facility_group_read"/>
     <menuitem id="sd_facility_space_menu_facility" name="Facilities" parent="sd_facility_menu" action="sd_facility_space_action_facility" sequence="10" groups="sd_facility_group_read"/>
     <menuitem id="sd_facility_space_menu_floor" name="Floors" parent="sd_facility_menu" action="sd_facility_space_action_floor" sequence="20" groups="sd_facility_group_read"/>
     <menuitem id="sd_facility_space_menu_area" name="Areas" parent="sd_facility_menu" action="sd_facility_space_action_area" sequence="30" groups="sd_facility_group_read"/>

@@ -184,19 +184,23 @@
     <record id="spreadsheet_dashboard.spreadsheet_dashboard_menu_root" model="ir.ui.menu">
         <field name="group_ids" eval="[Command.set([ref('base.group_system')])]"/>
     </record>
+    <menuitem id="menu_dental_permission_root" name="Permissions" sequence="53"
+              groups="group_dental_employee_read,group_dental_configuration_read,base.group_system"/>
     <menuitem id="menu_dental_permission_profiles" name="Permission Profiles"
-              parent="menu_dental_config" action="dental_permission_profile_action" sequence="30"/>
+              parent="menu_dental_permission_root" action="dental_permission_profile_action" sequence="10"/>
     <record id="menu_dental_permission_profiles" model="ir.ui.menu">
-        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read'), ref('group_dental_employee_read'), ref('base.group_system')])]"/>
     </record>
     <menuitem id="menu_dental_permission_apply" name="Apply Dental Permission Profile"
               parent="menu_dental_config" action="dental_permission_apply_action" sequence="40"/>
     <record id="menu_dental_permission_apply" model="ir.ui.menu">
+        <field name="active" eval="False"/>
         <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_write')])]"/>
     </record>
     <!-- Keep separately authorized native HR users; expose the public
          directory for Dental Employee Read and native management for RW. -->
     <record id="hr.menu_hr_root" model="ir.ui.menu">
-        <field name="group_ids" eval="[Command.set([ref('group_dental_employee_read'), ref('hr.group_hr_user'), ref('hr.group_hr_manager'), ref('base.group_system')])]"/>
+        <field name="sequence">51</field>
+        <field name="group_ids" eval="[Command.set([ref('base.group_user')])]"/>
     </record>
 </odoo>

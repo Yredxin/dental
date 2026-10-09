@@ -192,7 +192,11 @@ msgid "Workstation Assignment"
 msgstr "工作位排班"
 
 #. module: sd_facility_schedule
-#: model:ir.ui.menu,name:sd_facility_schedule.sd_facility_schedule_menu
 #: model:res.groups.privilege,name:sd_facility_schedule.privilege_facility_schedule
 msgid "Workstation Scheduling"
 msgstr "工作位排班"
+
+#. module: sd_facility_schedule
+#: model:ir.ui.menu,name:sd_facility_schedule.sd_facility_schedule_menu
+msgid "Schedule"
+msgstr "排班"

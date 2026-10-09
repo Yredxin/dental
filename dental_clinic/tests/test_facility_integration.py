@@ -39,9 +39,8 @@ class TestDentalFacilityIntegration(BaseCommon):
         for capability in ('patient', 'appointment', 'clinical', 'employee', 'configuration'):
             self.assertFalse(user.has_group(f'dental_clinic.group_dental_{capability}_write'))
 
-    def test_dental_menu_placement(self):
-        self.assertEqual(self.env.ref('sd_facility.sd_facility_menu').parent_id,
-                         self.env.ref('dental_clinic.menu_dental_config'))
+    def test_facility_peer_menu_placement(self):
+        self.assertFalse(self.env.ref('sd_facility.sd_facility_menu').parent_id)
 
     def test_capability_downgrade_removes_facility_management(self):
         self.manager.sudo()._apply_dental_capabilities({

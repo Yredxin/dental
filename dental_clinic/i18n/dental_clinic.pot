@@ -2073,6 +2073,7 @@ msgstr ""
 #: model:res.groups.privilege,name:dental_clinic.privilege_dental_patient
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_profile__patient_level
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__patient_level
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_patient_level
 msgid "Patient Management"
 msgstr ""
 
@@ -2080,6 +2081,7 @@ msgstr ""
 #: model:res.groups.privilege,name:dental_clinic.privilege_dental_appointment
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_profile__appointment_level
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__appointment_level
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_appointment_level
 msgid "Appointment Management"
 msgstr ""
 
@@ -2087,6 +2089,7 @@ msgstr ""
 #: model:res.groups.privilege,name:dental_clinic.privilege_dental_clinical
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_profile__clinical_level
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__clinical_level
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_clinical_level
 msgid "Dental Clinical"
 msgstr ""
 
@@ -2094,6 +2097,7 @@ msgstr ""
 #: model:res.groups.privilege,name:dental_clinic.privilege_dental_employee
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_profile__employee_level
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__employee_level
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_employee_level
 msgid "Employee Management"
 msgstr ""
 
@@ -2101,6 +2105,7 @@ msgstr ""
 #: model:res.groups.privilege,name:dental_clinic.privilege_dental_configuration
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_profile__configuration_level
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__configuration_level
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_configuration_level
 msgid "Dental Configuration"
 msgstr ""
 
@@ -2120,6 +2125,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__clinical_level__none
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__employee_level__none
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__configuration_level__none
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_patient_level__none
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_appointment_level__none
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_clinical_level__none
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_employee_level__none
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_configuration_level__none
 msgid "None"
 msgstr ""
 
@@ -2139,6 +2149,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__clinical_level__read
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__employee_level__read
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__configuration_level__read
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_patient_level__read
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_appointment_level__read
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_clinical_level__read
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_employee_level__read
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_configuration_level__read
 msgid "Read"
 msgstr ""
 
@@ -2158,6 +2173,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__clinical_level__write
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__employee_level__write
 #: model:ir.model.fields.selection,name:dental_clinic.selection__dental_permission_apply__configuration_level__write
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_patient_level__write
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_appointment_level__write
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_clinical_level__write
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_employee_level__write
+#: model:ir.model.fields.selection,name:dental_clinic.selection__hr_employee__dental_configuration_level__write
 msgid "Read/Write"
 msgstr ""
 
@@ -2197,6 +2217,8 @@ msgstr ""
 
 #. module: dental_clinic
 #: model:ir.model.fields,field_description:dental_clinic.field_dental_permission_apply__profile_id
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_permission_profile_id
 msgid "Permission Profile"
 msgstr ""
 
@@ -2235,4 +2257,110 @@ msgstr ""
 #. odoo-python
 #: code:addons/dental_clinic/models/hr_employee.py:0
 msgid "Only user administrators may invite employee users."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid "Work Permissions"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid "Linked Account"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid "Apply Profile"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid "Capability Configuration"
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid ""
+"This employee has no system login account. Work permissions only apply to "
+"employees with a login account."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid "Work permissions require an internal login account."
+msgstr ""
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.hr_employee_view_form_work_permissions
+msgid ""
+"Applying a profile saves permissions immediately. It is a one-time preset. "
+"You may then customize individual capabilities and save. Later profile "
+"changes do not affect this account."
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.model.fields,field_description:dental_clinic.field_hr_employee__dental_user_login
+msgid "Login"
+msgstr ""
+
+#. module: dental_clinic
+#: model:ir.ui.menu,name:dental_clinic.menu_dental_permission_root
+msgid "Permissions"
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "Employee Management Read/Write is required."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "This employee has no system login account."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "Save the employee before configuring work permissions."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "Choose a permission profile first."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "Choose an active permission profile."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "Dental Configuration or Employee Management Read/Write is required."
+msgstr ""
+
+#. module: dental_clinic
+#. odoo-python
+#: code:addons/dental_clinic/models/hr_employee.py:0
+#: code:addons/dental_clinic/models/res_users.py:0
+msgid "The user must have an accessible linked employee."
+msgstr ""
+
+
+#. module: dental_clinic
+#: model_terms:ir.ui.view,arch_db:dental_clinic.dental_permission_profile_view_list
+#: model_terms:ir.ui.view,arch_db:dental_clinic.dental_permission_profile_view_form
+msgid "Profile Name"
 msgstr ""
