@@ -10,7 +10,7 @@
                 <field name="practitioner_id"/>
                 <field name="date"/>
                 <field name="total_amount"/>
-                <field name="invoiced_amount"/>
+                <field name="invoiced_amount" groups="account.group_account_invoice,account.group_account_readonly"/>
                 <field name="state"/>
             </list>
         </field>
@@ -21,24 +21,26 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary"
+                    <button name="action_confirm" groups="dental_clinic.group_dental_clinical_write" type="object" string="Confirm" class="btn-primary"
                             invisible="state != 'draft'"/>
-                    <button name="action_start" type="object" string="Start"
+                    <button name="action_start" groups="dental_clinic.group_dental_clinical_write" type="object" string="Start"
                             invisible="state != 'confirmed'"/>
-                    <button name="action_done" type="object" string="Done" class="btn-primary"
+                    <button name="action_done" groups="dental_clinic.group_dental_clinical_write" type="object" string="Done" class="btn-primary"
                             invisible="state not in ('confirmed','in_progress')"/>
-                    <button name="action_create_invoice" type="object" string="Create Invoice"
+                    <div groups="dental_clinic.group_dental_configuration_write">
+                        <button name="action_create_invoice" groups="account.group_account_invoice" type="object" string="Create Invoice"
                             invisible="state == 'cancel'"/>
-                    <button name="action_cancel" type="object" string="Cancel"
+                    </div>
+                    <button name="action_cancel" groups="dental_clinic.group_dental_clinical_write" type="object" string="Cancel"
                             invisible="state in ('cancel','done')"/>
-                    <button name="action_draft" type="object" string="Reset to Draft"
+                    <button name="action_draft" groups="dental_clinic.group_dental_clinical_write" type="object" string="Reset to Draft"
                             invisible="state == 'draft'"/>
                     <field name="state" widget="statusbar"
                            statusbar_visible="draft,confirmed,in_progress,done"/>
                 </header>
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                        <button name="action_view_invoices" type="object" class="oe_stat_button" icon="fa-money">
+                    <div class="oe_button_box" name="button_box" groups="dental_clinic.group_dental_configuration_write">
+                        <button name="action_view_invoices" groups="account.group_account_invoice,account.group_account_readonly" type="object" class="oe_stat_button" icon="fa-money">
                             <field name="invoice_count" widget="statinfo" string="Invoices"/>
                         </button>
                     </div>
@@ -52,7 +54,7 @@
                             <field name="date"/>
                             <field name="expected_end_date"/>
                             <field name="total_amount" widget="monetary"/>
-                            <field name="invoiced_amount" widget="monetary"/>
+                            <field name="invoiced_amount" groups="account.group_account_invoice,account.group_account_readonly" widget="monetary"/>
                             <field name="currency_id" invisible="1"/>
                         </group>
                     </group>

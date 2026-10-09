@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="permission_profile_receptionist" model="dental.permission.profile">
+        <field name="name">Frontdesk</field>
+        <field name="patient_level">write</field>
+        <field name="appointment_level">write</field>
+        <field name="clinical_level">read</field>
+        <field name="employee_level">none</field>
+        <field name="configuration_level">none</field>
+    </record>
+    <record id="permission_profile_nurse" model="dental.permission.profile">
+        <field name="name">Nurse</field>
+        <field name="patient_level">read</field>
+        <field name="appointment_level">read</field>
+        <field name="clinical_level">read</field>
+        <field name="employee_level">none</field>
+        <field name="configuration_level">none</field>
+    </record>
+    <record id="permission_profile_warehouse" model="dental.permission.profile">
+        <field name="name">Warehouse</field>
+        <field name="patient_level">none</field>
+        <field name="appointment_level">none</field>
+        <field name="clinical_level">none</field>
+        <field name="employee_level">none</field>
+        <field name="configuration_level">none</field>
+    </record>
+    <record id="permission_profile_user" model="dental.permission.profile">
+        <field name="name">Dentist</field>
+        <field name="patient_level">read</field>
+        <field name="appointment_level">read</field>
+        <field name="clinical_level">write</field>
+        <field name="employee_level">none</field>
+        <field name="configuration_level">none</field>
+    </record>
+    <record id="permission_profile_manager" model="dental.permission.profile">
+        <field name="name">Clinic Manager</field>
+        <field name="patient_level">write</field>
+        <field name="appointment_level">write</field>
+        <field name="clinical_level">write</field>
+        <field name="employee_level">write</field>
+        <field name="configuration_level">write</field>
+    </record>
+</odoo>

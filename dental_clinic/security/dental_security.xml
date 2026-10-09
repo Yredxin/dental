@@ -6,42 +6,251 @@
             <field name="description">Manage the dental clinic.</field>
             <field name="sequence">25</field>
         </record>
-
+        <!-- Compatibility XML ID only: no groups remain in this privilege. -->
         <record id="privilege_dental" model="res.groups.privilege">
-            <field name="name">Dental Clinic</field>
+            <field name="name">Dental Clinic (legacy)</field>
             <field name="category_id" ref="module_category_dental"/>
         </record>
-
+        <record id="privilege_dental_patient" model="res.groups.privilege">
+            <field name="name">Patient Management</field>
+            <field name="placeholder">None</field>
+            <field name="sequence">10</field>
+            <field name="category_id" ref="module_category_dental"/>
+        </record>
+        <record id="privilege_dental_appointment" model="res.groups.privilege">
+            <field name="name">Appointment Management</field>
+            <field name="placeholder">None</field>
+            <field name="sequence">20</field>
+            <field name="category_id" ref="module_category_dental"/>
+        </record>
+        <record id="privilege_dental_clinical" model="res.groups.privilege">
+            <field name="name">Dental Clinical</field>
+            <field name="placeholder">None</field>
+            <field name="sequence">30</field>
+            <field name="category_id" ref="module_category_dental"/>
+        </record>
+        <record id="privilege_dental_employee" model="res.groups.privilege">
+            <field name="name">Employee Management</field>
+            <field name="placeholder">None</field>
+            <field name="sequence">40</field>
+            <field name="category_id" ref="module_category_dental"/>
+        </record>
+        <record id="privilege_dental_configuration" model="res.groups.privilege">
+            <field name="name">Dental Configuration</field>
+            <field name="placeholder">None</field>
+            <field name="sequence">50</field>
+            <field name="category_id" ref="module_category_dental"/>
+        </record>
+        <record id="group_dental_patient_read" model="res.groups">
+            <field name="name">Read</field>
+            <field name="privilege_id" ref="privilege_dental_patient"/>
+            <field name="sequence">10</field>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+        </record>
+        <record id="group_dental_patient_write" model="res.groups">
+            <field name="name">Read/Write</field>
+            <field name="privilege_id" ref="privilege_dental_patient"/>
+            <field name="sequence">20</field>
+            <field name="implied_ids" eval="[Command.set([ref('group_dental_patient_read')])]"/>
+        </record>
+        <record id="group_dental_appointment_read" model="res.groups">
+            <field name="name">Read</field>
+            <field name="privilege_id" ref="privilege_dental_appointment"/>
+            <field name="sequence">10</field>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+        </record>
+        <record id="group_dental_appointment_write" model="res.groups">
+            <field name="name">Read/Write</field>
+            <field name="privilege_id" ref="privilege_dental_appointment"/>
+            <field name="sequence">20</field>
+            <field name="implied_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+        </record>
+        <record id="group_dental_clinical_read" model="res.groups">
+            <field name="name">Read</field>
+            <field name="privilege_id" ref="privilege_dental_clinical"/>
+            <field name="sequence">10</field>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+        </record>
+        <record id="group_dental_clinical_write" model="res.groups">
+            <field name="name">Read/Write</field>
+            <field name="privilege_id" ref="privilege_dental_clinical"/>
+            <field name="sequence">20</field>
+            <field name="implied_ids" eval="[Command.set([ref('group_dental_clinical_read')])]"/>
+        </record>
+        <record id="group_dental_employee_read" model="res.groups">
+            <field name="name">Read</field>
+            <field name="privilege_id" ref="privilege_dental_employee"/>
+            <field name="sequence">10</field>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+        </record>
+        <record id="group_dental_employee_write" model="res.groups">
+            <field name="name">Read/Write</field>
+            <field name="privilege_id" ref="privilege_dental_employee"/>
+            <field name="sequence">20</field>
+            <field name="implied_ids" eval="[Command.set([ref('group_dental_employee_read'), ref('hr.group_hr_user')])]"/>
+        </record>
+        <record id="group_dental_configuration_read" model="res.groups">
+            <field name="name">Read</field>
+            <field name="privilege_id" ref="privilege_dental_configuration"/>
+            <field name="sequence">10</field>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+        </record>
+        <record id="group_dental_configuration_write" model="res.groups">
+            <field name="name">Read/Write</field>
+            <field name="privilege_id" ref="privilege_dental_configuration"/>
+            <field name="sequence">20</field>
+            <field name="implied_ids" eval="[Command.set([ref('group_dental_configuration_read'), ref('product.group_product_manager')])]"/>
+        </record>
         <record id="group_dental_receptionist" model="res.groups">
-            <field name="name">Receptionist</field>
-            <field name="privilege_id" ref="privilege_dental"/>
-            <field name="comment">Can manage patients and appointments.</field>
+            <field name="name">Frontdesk (legacy)</field>
+            <field name="privilege_id" eval="False"/>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user'), ref('group_dental_patient_write'), ref('group_dental_appointment_write'), ref('group_dental_clinical_read')])]"/>
+            <field name="comment">Deprecated compatibility preset; use independent Dental capabilities.</field>
         </record>
-
+        <record id="group_dental_nurse" model="res.groups">
+            <field name="name">Nurse (legacy)</field>
+            <field name="privilege_id" eval="False"/>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user'), ref('group_dental_patient_read'), ref('group_dental_appointment_read'), ref('group_dental_clinical_read')])]"/>
+            <field name="comment">Deprecated compatibility preset; use independent Dental capabilities.</field>
+        </record>
+        <record id="group_dental_warehouse" model="res.groups">
+            <field name="name">Warehouse (legacy)</field>
+            <field name="privilege_id" eval="False"/>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user')])]"/>
+            <field name="comment">Deprecated compatibility preset; use independent Dental capabilities.</field>
+        </record>
         <record id="group_dental_user" model="res.groups">
-            <field name="name">Dentist / User</field>
-            <field name="privilege_id" ref="privilege_dental"/>
-            <field name="implied_ids" eval="[(4, ref('group_dental_receptionist'))]"/>
-            <field name="comment">Dentists, hygienists.</field>
+            <field name="name">Dentist (legacy)</field>
+            <field name="privilege_id" eval="False"/>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user'), ref('group_dental_patient_read'), ref('group_dental_appointment_read'), ref('group_dental_clinical_write')])]"/>
+            <field name="comment">Deprecated compatibility preset; use independent Dental capabilities.</field>
         </record>
-
         <record id="group_dental_manager" model="res.groups">
-            <field name="name">Manager</field>
-            <field name="privilege_id" ref="privilege_dental"/>
-            <field name="implied_ids" eval="[(4, ref('group_dental_user'))]"/>
-            <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
-            <field name="comment">Full access including configuration.</field>
+            <field name="name">Manager (legacy)</field>
+            <field name="privilege_id" eval="False"/>
+            <field name="implied_ids" eval="[Command.set([ref('base.group_user'), ref('group_dental_patient_write'), ref('group_dental_appointment_write'), ref('group_dental_clinical_write'), ref('group_dental_employee_write'), ref('group_dental_configuration_write')])]"/>
+            <field name="comment">Deprecated compatibility preset; use independent Dental capabilities.</field>
         </record>
+        <record id="base.group_system" model="res.groups">
+            <field name="implied_ids" eval="[Command.unlink(ref('group_dental_manager')),
+                Command.link(ref('group_dental_patient_write')),
+                Command.link(ref('group_dental_appointment_write')),
+                Command.link(ref('group_dental_clinical_write')),
+                Command.link(ref('group_dental_employee_write')),
+                Command.link(ref('group_dental_configuration_write'))]"/>
+        </record>
+        <function model="res.users" name="_migrate_legacy_dental_groups"/>
 
-        <!-- Odoo 20 combines ACLs and record restrictions in ir.access.
-             A global conditional restriction preserves the baseline: dentists
-             (including managers) are company-restricted; receptionists are not. -->
+        <!-- Fixed Dental registration permission; normal post-create domain
+             enforcement, no generic partner write/delete authority. -->
+        <record id="access_dental_patient_contact_create" model="ir.access">
+            <field name="name">Patient Management creates Dental contacts only</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="group_id" ref="group_dental_patient_write"/>
+            <field name="operation">c</field>
+            <field name="domain">[('is_dental_patient', '=', True)]</field>
+        </record>
+        <record id="access_dental_patient_full_management" model="ir.access">
+            <field name="name">Full Dental management: patient</field>
+            <field name="model_id" ref="model_dental_patient"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_appointment_full_management" model="ir.access">
+            <field name="name">Full Dental management: appointment</field>
+            <field name="model_id" ref="model_dental_appointment"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_medical_history_full_management" model="ir.access">
+            <field name="name">Full Dental management: medical_history</field>
+            <field name="model_id" ref="model_dental_medical_history"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_tooth_full_management" model="ir.access">
+            <field name="name">Full Dental management: tooth</field>
+            <field name="model_id" ref="model_dental_tooth"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">cd</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_treatment_plan_full_management" model="ir.access">
+            <field name="name">Full Dental management: treatment_plan</field>
+            <field name="model_id" ref="model_dental_treatment_plan"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_treatment_plan_line_full_management" model="ir.access">
+            <field name="name">Full Dental management: treatment_plan_line</field>
+            <field name="model_id" ref="model_dental_treatment_plan_line"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_prescription_full_management" model="ir.access">
+            <field name="name">Full Dental management: prescription</field>
+            <field name="model_id" ref="model_dental_prescription"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_prescription_line_full_management" model="ir.access">
+            <field name="name">Full Dental management: prescription_line</field>
+            <field name="model_id" ref="model_dental_prescription_line"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">d</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <record id="access_dental_invoice_wizard_full_management" model="ir.access">
+            <field name="name">Full Dental management: invoice_wizard</field>
+            <field name="model_id" ref="model_dental_invoice_wizard"/>
+            <field name="group_id" ref="group_dental_configuration_write"/>
+            <field name="operation">crud</field>
+            <field name="domain">[] if user.has_group('dental_clinic.group_dental_patient_write') and user.has_group('dental_clinic.group_dental_appointment_write') and user.has_group('dental_clinic.group_dental_clinical_write') and user.has_group('dental_clinic.group_dental_employee_write') and user.has_group('dental_clinic.group_dental_configuration_write') else [('id', '=', False)]</field>
+        </record>
+        <!-- Company restrictions apply to every business role and every CRUD
+             operation. Keep the existing appointment XML ID for upgrades. -->
         <record id="rule_dental_appointment_user" model="ir.access">
             <field name="name">Practitioners see all appointments in their company</field>
             <field name="model_id" ref="model_dental_appointment"/>
             <field name="operation">crud</field>
-            <field name="domain">[('company_id', 'in', company_ids)] if user.has_group('dental_clinic.group_dental_user') else []</field>
+            <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
 
+        </record>
+        <record id="rule_dental_treatment_plan_company" model="ir.access">
+            <field name="name">Treatment plans in allowed companies</field>
+            <field name="model_id" ref="model_dental_treatment_plan"/>
+            <field name="operation">crud</field>
+            <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+        </record>
+        <record id="rule_dental_treatment_plan_line_company" model="ir.access">
+            <field name="name">Treatment plan lines in allowed companies</field>
+            <field name="model_id" ref="model_dental_treatment_plan_line"/>
+            <field name="operation">crud</field>
+            <field name="domain">[('plan_id.company_id', 'in', company_ids + [False])]</field>
+        </record>
+        <record id="rule_dental_prescription_company" model="ir.access">
+            <field name="name">Prescriptions in allowed companies</field>
+            <field name="model_id" ref="model_dental_prescription"/>
+            <field name="operation">crud</field>
+            <field name="domain">[('company_id', 'in', company_ids + [False])]</field>
+        </record>
+        <record id="rule_dental_prescription_line_company" model="ir.access">
+            <field name="name">Prescription lines in allowed companies</field>
+            <field name="model_id" ref="model_dental_prescription_line"/>
+            <field name="operation">crud</field>
+            <field name="domain">[('prescription_id.company_id', 'in', company_ids + [False])]</field>
+        </record>
+        <record id="rule_dental_invoice_wizard_company" model="ir.access">
+            <field name="name">Invoice wizards in allowed plan companies</field>
+            <field name="model_id" ref="model_dental_invoice_wizard"/>
+            <field name="operation">crud</field>
+            <field name="domain">[('plan_id.company_id', 'in', company_ids + [False])]</field>
         </record>
     </data>
 </odoo>

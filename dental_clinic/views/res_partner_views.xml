@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="res_partner_view_dental_registration" model="ir.ui.view">
+        <field name="name">res.partner.view.dental.registration</field>
+        <field name="model">res.partner</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <form string="Patient Contact">
+                <sheet>
+                    <field name="is_dental_patient" invisible="1"/>
+                    <group>
+                        <field name="name" widget="char" required="1"/>
+                        <field name="phone"/>
+                        <field name="mobile"/>
+                        <field name="email"/>
+                        <field name="street"/>
+                        <field name="city"/>
+                        <field name="zip"/>
+                        <field name="country_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <record id="view_partner_form_inherit_dental" model="ir.ui.view">
         <field name="name">res.partner.form.dental</field>
         <field name="model">res.partner</field>

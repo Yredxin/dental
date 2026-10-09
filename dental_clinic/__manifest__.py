@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Dental Clinic Management',
-    'version': '20.0.1.0.0',
+    'version': '20.0.2.0.0',
     'category': 'Healthcare',
     'summary': 'Complete dental clinic management: patients, appointments, treatments, odontogram, prescriptions, billing.',
     'description': """
@@ -15,7 +15,7 @@ Features:
   * Interactive odontogram (32 teeth) with tooth conditions
   * Prescriptions with printable PDF
   * Native integration with Odoo Invoicing (no insurance)
-  * Security groups (Receptionist / Dentist / Manager)
+  * Independent Dental capabilities and optional permission profiles
   * Demo data ready to test
 """,
     'author': 'souhaibouadi',
@@ -28,6 +28,12 @@ Features:
         'product',
         'account',
         'calendar',
+        # Native public employee directory / HR Officer authority.
+        'hr',
+        # Direct user-menu registry dependency and asset load ordering.
+        'mysubscription',
+        # Direct menu reference; account already auto-installs its dashboards.
+        'spreadsheet_dashboard',
     ],
     'data': [
         # 1) Security
@@ -37,6 +43,7 @@ Features:
         'data/ir_sequence_data.xml',
         'data/dental_tooth_data.xml',
         'data/mail_template_data.xml',
+        'data/dental_permission_profile_data.xml',
         # 3) Reports
         'report/report_paperformat.xml',
         'report/dental_prescription_template.xml',
@@ -54,6 +61,9 @@ Features:
         'views/dental_tooth_views.xml',
         'views/dental_prescription_views.xml',
         'wizards/dental_invoice_wizard_views.xml',
+        'views/dental_permission_profile_views.xml',
+        'wizards/dental_permission_apply_views.xml',
+        'views/res_users_views.xml',
         # 5) Menus LAST (they reference actions defined above)
         'views/dental_menus.xml',
     ],
@@ -63,6 +73,7 @@ Features:
     'assets': {
         'web.assets_backend': [
             'dental_clinic/static/src/css/odontogram.css',
+            'dental_clinic/static/src/user_menu/user_menu.js',
         ],
     },
     'images': ['static/description/icon.png'],

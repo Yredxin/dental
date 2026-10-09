@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- base_install_request exposes Apps to all regular users. Dental V1
+         reserves this app entry point for standard System Administrators. -->
+    <record id="base.menu_management" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('base.group_system')])]"/>
+    </record>
+
     <!--
         ============================================================
         Top-level application menu - "Dental"
@@ -8,85 +14,129 @@
     <menuitem id="menu_dental_root"
               name="Dental"
               web_icon="dental_clinic,static/description/icon.png"
-              sequence="50"
-              groups="group_dental_receptionist,group_dental_user,group_dental_manager"/>
+              sequence="50"/>
+    <record id="menu_dental_root" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_patient_read'), ref('group_dental_clinical_read'), ref('group_dental_appointment_read'), ref('group_dental_configuration_read')])]"/>
+    </record>
 
     <menuitem id="menu_dental_dashboard"
               name="Dashboard"
               parent="menu_dental_root"
               sequence="1"
               action="action_dental_appointment_calendar"/>
+    <record id="menu_dental_dashboard" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+    </record>
 
     <menuitem id="menu_dental_patients_top"
               name="Patients"
               parent="menu_dental_root"
               sequence="10"/>
+    <record id="menu_dental_patients_top" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_patient_read'), ref('group_dental_clinical_read')])]"/>
+    </record>
     <menuitem id="menu_dental_patients"
               name="All Patients"
               parent="menu_dental_patients_top"
               sequence="1"
               action="action_dental_patient"/>
+    <record id="menu_dental_patients" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_patient_read'), ref('group_dental_clinical_read')])]"/>
+    </record>
     <menuitem id="menu_dental_odontogram"
               name="Odontogram"
               parent="menu_dental_patients_top"
               sequence="10"
               action="action_dental_tooth"/>
+    <record id="menu_dental_odontogram" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_patient_read'), ref('group_dental_clinical_read')])]"/>
+    </record>
 
     <menuitem id="menu_dental_appointments_top"
               name="Appointments"
               parent="menu_dental_root"
               sequence="20"/>
+    <record id="menu_dental_appointments_top" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+    </record>
     <menuitem id="menu_dental_appointments_calendar"
               name="Calendar"
               parent="menu_dental_appointments_top"
               sequence="1"
               action="action_dental_appointment_calendar"/>
+    <record id="menu_dental_appointments_calendar" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+    </record>
     <menuitem id="menu_dental_appointments_list"
               name="All Appointments"
               parent="menu_dental_appointments_top"
               sequence="10"
               action="action_dental_appointment"/>
+    <record id="menu_dental_appointments_list" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+    </record>
     <menuitem id="menu_dental_clinical_top"
               name="Clinical"
               parent="menu_dental_root"
-              sequence="30"
-              groups="group_dental_user,group_dental_manager"/>
+              sequence="30"/>
+    <record id="menu_dental_clinical_top" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_clinical_read')])]"/>
+    </record>
     <menuitem id="menu_dental_plans"
               name="Treatment Plans"
               parent="menu_dental_clinical_top"
               sequence="1"
               action="action_dental_treatment_plan"/>
+    <record id="menu_dental_plans" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_clinical_read')])]"/>
+    </record>
     <menuitem id="menu_dental_prescriptions"
               name="Prescriptions"
               parent="menu_dental_clinical_top"
               sequence="10"
               action="action_dental_prescription"/>
+    <record id="menu_dental_prescriptions" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_clinical_read')])]"/>
+    </record>
 
     <menuitem id="menu_dental_billing_top"
               name="Billing"
               parent="menu_dental_root"
-              sequence="40"
-              groups="group_dental_user,group_dental_manager"/>
+              sequence="40"/>
+    <record id="menu_dental_billing_top" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_write')])]"/>
+    </record>
     <menuitem id="menu_dental_config"
               name="Configuration"
               parent="menu_dental_root"
-              sequence="90"
-              groups="group_dental_manager"/>
+              sequence="90"/>
+    <record id="menu_dental_config" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+    </record>
     <menuitem id="menu_dental_config_treatments"
               name="Treatment Catalog"
               parent="menu_dental_config"
               sequence="1"
               action="action_dental_treatment"/>
+    <record id="menu_dental_config_treatments" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+    </record>
     <menuitem id="menu_dental_config_practitioners"
               name="Practitioners"
               parent="menu_dental_config"
               sequence="10"
               action="action_dental_practitioner"/>
+    <record id="menu_dental_config_practitioners" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+    </record>
     <menuitem id="menu_dental_config_rooms"
               name="Rooms / Chairs"
               parent="menu_dental_config"
               sequence="20"
               action="action_dental_room"/>
+    <record id="menu_dental_config_rooms" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+    </record>
 
     <!-- Cross-cutting actions -->
     <record id="action_dental_invoices" model="ir.actions.act_window">
@@ -115,10 +165,38 @@
               parent="menu_dental_appointments_top"
               sequence="20"
               action="action_dental_appointment_today"/>
+    <record id="menu_dental_appointments_today" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_appointment_read')])]"/>
+    </record>
 
     <menuitem id="menu_dental_invoices"
               name="Patient Invoices"
               parent="menu_dental_billing_top"
               sequence="1"
               action="action_dental_invoices"/>
+    <record id="menu_dental_invoices" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('account.group_account_invoice'), ref('account.group_account_readonly')])]"/>
+    </record>
+    <!-- Clinic users use the controlled Dental contact surface. -->
+    <record id="contacts.menu_contacts" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('base.group_system')])]"/>
+    </record>
+    <record id="spreadsheet_dashboard.spreadsheet_dashboard_menu_root" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('base.group_system')])]"/>
+    </record>
+    <menuitem id="menu_dental_permission_profiles" name="Permission Profiles"
+              parent="menu_dental_config" action="dental_permission_profile_action" sequence="30"/>
+    <record id="menu_dental_permission_profiles" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_read')])]"/>
+    </record>
+    <menuitem id="menu_dental_permission_apply" name="Apply Dental Permission Profile"
+              parent="menu_dental_config" action="dental_permission_apply_action" sequence="40"/>
+    <record id="menu_dental_permission_apply" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_configuration_write')])]"/>
+    </record>
+    <!-- Keep separately authorized native HR users; expose the public
+         directory for Dental Employee Read and native management for RW. -->
+    <record id="hr.menu_hr_root" model="ir.ui.menu">
+        <field name="group_ids" eval="[Command.set([ref('group_dental_employee_read'), ref('hr.group_hr_user'), ref('hr.group_hr_manager'), ref('base.group_system')])]"/>
+    </record>
 </odoo>

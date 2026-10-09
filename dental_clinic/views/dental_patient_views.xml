@@ -7,13 +7,14 @@
             <list string="Patients" sample="1">
                 <field name="code"/>
                 <field name="name"/>
-                <field name="gender"/>
+                <field name="gender" groups="dental_clinic.group_dental_patient_write"/>
+                <field name="gender" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                 <field name="age"/>
                 <field name="phone"/>
                 <field name="mobile"/>
                 <field name="email"/>
                 <field name="appointment_count"/>
-                <field name="treatment_plan_count"/>
+                <field name="treatment_plan_count" groups="dental_clinic.group_dental_clinical_read"/>
             </list>
         </field>
     </record>
@@ -24,44 +25,57 @@
         <field name="arch" type="xml">
             <form string="Patient">
                 <sheet>
-                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <field name="image_1920" groups="dental_clinic.group_dental_patient_write" widget="image" class="oe_avatar"/>
+                    <field name="image_1920" groups="!dental_clinic.group_dental_patient_write" widget="image" class="oe_avatar" readonly="1"/>
                     <div class="oe_button_box" name="button_box">
-                        <button name="action_open_appointments" type="object"
+                        <button name="action_open_appointments" groups="dental_clinic.group_dental_appointment_read" type="object"
                                 class="oe_stat_button" icon="fa-calendar">
                             <field name="appointment_count" widget="statinfo" string="Appointments"/>
                         </button>
-                        <button name="action_open_treatment_plans" type="object"
+                        <button name="action_open_treatment_plans" groups="dental_clinic.group_dental_clinical_read" type="object"
                                 class="oe_stat_button" icon="fa-stethoscope">
                             <field name="treatment_plan_count" widget="statinfo" string="Plans"/>
                         </button>
-                        <button name="action_open_prescriptions" type="object"
+                        <button name="action_open_prescriptions" groups="dental_clinic.group_dental_clinical_read" type="object"
                                 class="oe_stat_button" icon="fa-medkit">
                             <field name="prescription_count" widget="statinfo" string="Rx"/>
                         </button>
-                        <button name="action_open_invoices" type="object"
+                        <div groups="dental_clinic.group_dental_configuration_write">
+                            <button name="action_open_invoices" groups="account.group_account_invoice,account.group_account_readonly" type="object"
                                 class="oe_stat_button" icon="fa-money">
                             <field name="invoice_count" widget="statinfo" string="Invoices"/>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                     <div class="oe_title">
                         <label for="name"/>
-                        <h1><field name="name" placeholder="Patient name..."/></h1>
+                        <h1>
+                            <field name="name" groups="dental_clinic.group_dental_patient_write" placeholder="Patient name..."/>
+                            <field name="name" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                        </h1>
                         <h3><field name="code"/></h3>
                     </div>
                     <group>
                         <group string="Identity">
+                            <field name="can_repair_contact" invisible="1"/>
                             <field name="partner_id"
-                                   options="{'no_create_edit': False}"
-                                   context="{'default_is_dental_patient': True}"/>
-                            <field name="gender"/>
-                            <field name="birth_date"/>
+                                   readonly="id and not can_repair_contact" options="{'no_create_edit': False, 'no_open': True}"
+                                   context="{'default_is_dental_patient': True, 'form_view_ref': 'dental_clinic.res_partner_view_dental_registration'}"/>
+                            <field name="gender" groups="dental_clinic.group_dental_patient_write"/>
+                            <field name="gender" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                            <field name="birth_date" groups="dental_clinic.group_dental_patient_write"/>
+                            <field name="birth_date" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                             <field name="age"/>
-                            <field name="national_id"/>
-                            <field name="blood_type"/>
-                            <field name="marital_status"/>
-                            <field name="occupation"/>
+                            <field name="national_id" groups="dental_clinic.group_dental_patient_write"/>
+                            <field name="national_id" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                            <field name="blood_type" groups="dental_clinic.group_dental_clinical_write"/>
+                            <field name="blood_type" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
+                            <field name="marital_status" groups="dental_clinic.group_dental_patient_write"/>
+                            <field name="marital_status" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                            <field name="occupation" groups="dental_clinic.group_dental_patient_write"/>
+                            <field name="occupation" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                         </group>
-                        <group string="Contact">
+                        <group string="Contact" groups="dental_clinic.group_dental_patient_write">
                             <field name="phone"/>
                             <field name="mobile"/>
                             <field name="email" widget="email"/>
@@ -70,25 +84,49 @@
                             <field name="zip"/>
                             <field name="country_id"/>
                         </group>
+                        <group string="Contact" groups="!dental_clinic.group_dental_patient_write">
+                            <field name="phone" readonly="1"/>
+                            <field name="mobile" readonly="1"/>
+                            <field name="email" widget="email" readonly="1"/>
+                            <field name="street" readonly="1"/>
+                            <field name="city" readonly="1"/>
+                            <field name="zip" readonly="1"/>
+                            <field name="country_id" readonly="1"/>
+                        </group>
                     </group>
                     <notebook>
-                        <page string="Medical Info">
+                        <page name="medical_info" string="Medical Info">
                             <group>
                                 <group>
-                                    <field name="smoker"/>
-                                    <field name="pregnant"/>
+                                    <field name="smoker" groups="dental_clinic.group_dental_clinical_write"/>
+                                    <field name="smoker" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
+                                    <field name="pregnant" groups="dental_clinic.group_dental_clinical_write"/>
+                                    <field name="pregnant" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                                 </group>
                                 <group/>
                             </group>
                             <separator string="Allergies"/>
                             <field name="allergies"
-                                   placeholder="Penicillin, latex, anesthetics..."/>
+                                   placeholder="Penicillin, latex, anesthetics..." groups="dental_clinic.group_dental_clinical_write"/>
+                            <field name="allergies"
+                                   placeholder="Penicillin, latex, anesthetics..." groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                             <separator string="Chronic Diseases"/>
-                            <field name="chronic_diseases"/>
+                            <field name="chronic_diseases" groups="dental_clinic.group_dental_clinical_write"/>
+                            <field name="chronic_diseases" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                             <separator string="Current Medications"/>
-                            <field name="current_medications"/>
+                            <field name="current_medications" groups="dental_clinic.group_dental_clinical_write"/>
+                            <field name="current_medications" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                             <separator string="Medical History"/>
-                            <field name="medical_history_ids">
+                            <field name="medical_history_ids" groups="dental_clinic.group_dental_clinical_write">
+                                <list editable="bottom">
+                                    <field name="date"/>
+                                    <field name="kind"/>
+                                    <field name="title"/>
+                                    <field name="description"/>
+                                    <field name="practitioner_id"/>
+                                </list>
+                            </field>
+                            <field name="medical_history_ids" groups="!dental_clinic.group_dental_clinical_write" readonly="1">
                                 <list editable="bottom">
                                     <field name="date"/>
                                     <field name="kind"/>
@@ -98,8 +136,8 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Odontogram">
-                            <field name="tooth_ids">
+                        <page name="odontogram" string="Odontogram">
+                            <field name="tooth_ids" groups="dental_clinic.group_dental_clinical_write">
                                 <list editable="bottom"
                                       decoration-success="condition=='healthy'"
                                       decoration-warning="condition in ('caries','to_extract')"
@@ -110,11 +148,27 @@
                                     <field name="condition"/>
                                     <field name="surface"/>
                                     <field name="last_treatment_date"/>
-                                    <field name="notes"/>
+                                    <field name="notes" groups="dental_clinic.group_dental_clinical_write"/>
+                                    <field name="notes" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
+                                </list>
+                            </field>
+                            <field name="tooth_ids" groups="!dental_clinic.group_dental_clinical_write" readonly="1">
+                                <list editable="bottom"
+                                      decoration-success="condition=='healthy'"
+                                      decoration-warning="condition in ('caries','to_extract')"
+                                      decoration-danger="condition in ('extracted','missing')">
+                                    <field name="tooth_number"/>
+                                    <field name="name"/>
+                                    <field name="quadrant"/>
+                                    <field name="condition"/>
+                                    <field name="surface"/>
+                                    <field name="last_treatment_date"/>
+                                    <field name="notes" groups="dental_clinic.group_dental_clinical_write"/>
+                                    <field name="notes" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                                 </list>
                             </field>
                         </page>
-                        <page string="Appointments">
+                        <page string="Appointments" groups="dental_clinic.group_dental_appointment_read">
                             <field name="appointment_ids" readonly="1">
                                 <list>
                                     <field name="name"/>
@@ -125,7 +179,7 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Treatment Plans">
+                        <page name="treatment_plans" string="Treatment Plans" groups="dental_clinic.group_dental_clinical_read">
                             <field name="treatment_plan_ids" readonly="1">
                                 <list>
                                     <field name="name"/>
@@ -136,7 +190,7 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Prescriptions">
+                        <page name="prescriptions" string="Prescriptions" groups="dental_clinic.group_dental_clinical_read">
                             <field name="prescription_ids" readonly="1">
                                 <list>
                                     <field name="name"/>
@@ -148,13 +202,17 @@
                         </page>
                         <page string="Emergency Contact">
                             <group>
-                                <field name="emergency_name"/>
-                                <field name="emergency_phone"/>
-                                <field name="emergency_relation"/>
+                                <field name="emergency_name" groups="dental_clinic.group_dental_patient_write"/>
+                                <field name="emergency_name" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                                <field name="emergency_phone" groups="dental_clinic.group_dental_patient_write"/>
+                                <field name="emergency_phone" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
+                                <field name="emergency_relation" groups="dental_clinic.group_dental_patient_write"/>
+                                <field name="emergency_relation" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                             </group>
                         </page>
                         <page string="Internal Notes">
-                            <field name="notes"/>
+                            <field name="notes" groups="dental_clinic.group_dental_clinical_write"/>
+                            <field name="notes" groups="!dental_clinic.group_dental_clinical_write" readonly="1"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -175,7 +233,8 @@
                 <field name="mobile"/>
                 <field name="age"/>
                 <field name="partner_id"/>
-                <field name="gender"/>
+                <field name="gender" groups="dental_clinic.group_dental_patient_write"/>
+                <field name="gender" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                 <templates>
                     <t t-name="card">
                         <div class="oe_kanban_card oe_kanban_global_click o_kanban_record_has_image_fill">
@@ -211,15 +270,16 @@
                 <field name="code"/>
                 <field name="phone"/>
                 <field name="mobile"/>
-                <field name="national_id"/>
+                <field name="national_id" groups="dental_clinic.group_dental_patient_write"/>
+                <field name="national_id" groups="!dental_clinic.group_dental_patient_write" readonly="1"/>
                 <filter name="male" string="Male" domain="[('gender','=','male')]"/>
                 <filter name="female" string="Female" domain="[('gender','=','female')]"/>
                 <separator/>
-                <filter name="smoker" string="Smokers" domain="[('smoker','=',True)]"/>
-                <filter name="pregnant" string="Pregnant" domain="[('pregnant','=',True)]"/>
+                <filter name="smoker" groups="dental_clinic.group_dental_clinical_read" string="Smokers" domain="[('smoker','=',True)]"/>
+                <filter name="pregnant" groups="dental_clinic.group_dental_clinical_read" string="Pregnant" domain="[('pregnant','=',True)]"/>
                 <group>
                     <filter name="group_gender" string="Gender" context="{'group_by':'gender'}"/>
-                    <filter name="group_blood" string="Blood Type" context="{'group_by':'blood_type'}"/>
+                    <filter name="group_blood" groups="dental_clinic.group_dental_clinical_read" string="Blood Type" context="{'group_by':'blood_type'}"/>
                 </group>
             </search>
         </field>

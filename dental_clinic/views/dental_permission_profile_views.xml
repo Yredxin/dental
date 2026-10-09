@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="dental_permission_profile_view_list" model="ir.ui.view">
+        <field name="name">dental.permission.profile.list</field>
+        <field name="model">dental.permission.profile</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="patient_level"/>
+                <field name="appointment_level"/>
+                <field name="clinical_level"/>
+                <field name="employee_level"/>
+                <field name="configuration_level"/>
+            </list>
+        </field>
+    </record>
+    <record id="dental_permission_profile_view_form" model="ir.ui.view">
+        <field name="name">dental.permission.profile.form</field>
+        <field name="model">dental.permission.profile</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="patient_level"/>
+                        <field name="appointment_level"/>
+                        <field name="clinical_level"/>
+                        <field name="employee_level"/>
+                        <field name="configuration_level"/>
+                    </group>
+                    <p class="text-muted">Profiles are optional presets. Later capability adjustments remain effective.</p>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="dental_permission_profile_action" model="ir.actions.act_window">
+        <field name="name">Permission Profiles</field>
+        <field name="res_model">dental.permission.profile</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

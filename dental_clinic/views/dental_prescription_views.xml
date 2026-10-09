@@ -19,13 +19,13 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary"
+                    <button name="action_confirm" groups="dental_clinic.group_dental_clinical_write" type="object" string="Confirm" class="btn-primary"
                             invisible="state != 'draft'"/>
-                    <button name="action_print" type="object" string="Print" class="btn-primary"
+                    <button name="action_print" groups="dental_clinic.group_dental_clinical_read" type="object" string="Print" class="btn-primary"
                             invisible="state == 'cancel'"/>
-                    <button name="action_cancel" type="object" string="Cancel"
+                    <button name="action_cancel" groups="dental_clinic.group_dental_clinical_write" type="object" string="Cancel"
                             invisible="state == 'cancel'"/>
-                    <button name="action_draft" type="object" string="Reset"
+                    <button name="action_draft" groups="dental_clinic.group_dental_clinical_write" type="object" string="Reset"
                             invisible="state == 'draft'"/>
                     <field name="state" widget="statusbar"/>
                 </header>

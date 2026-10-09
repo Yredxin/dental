@@ -27,19 +27,19 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="action_confirm" type="object" string="Confirm"
+                    <button name="action_confirm" groups="dental_clinic.group_dental_appointment_write" type="object" string="Confirm"
                             class="btn-primary" invisible="state != 'draft'"/>
-                    <button name="action_check_in" type="object" string="Check-In"
+                    <button name="action_check_in" groups="dental_clinic.group_dental_appointment_write" type="object" string="Check-In"
                             invisible="state != 'confirmed'"/>
-                    <button name="action_done" type="object" string="Mark Done"
+                    <button name="action_done" groups="dental_clinic.group_dental_appointment_write" type="object" string="Mark Done"
                             class="btn-primary" invisible="state not in ('confirmed','checked_in')"/>
-                    <button name="action_no_show" type="object" string="No-Show"
+                    <button name="action_no_show" groups="dental_clinic.group_dental_appointment_write" type="object" string="No-Show"
                             invisible="state not in ('confirmed','checked_in')"/>
-                    <button name="action_send_reminder" type="object" string="Send Reminder"
+                    <button name="action_send_reminder" groups="dental_clinic.group_dental_appointment_write" type="object" string="Send Reminder"
                             invisible="state != 'confirmed'"/>
-                    <button name="action_cancel" type="object" string="Cancel"
+                    <button name="action_cancel" groups="dental_clinic.group_dental_appointment_write" type="object" string="Cancel"
                             invisible="state in ('cancel','done')"/>
-                    <button name="action_draft" type="object" string="Reset to Draft"
+                    <button name="action_draft" groups="dental_clinic.group_dental_appointment_write" type="object" string="Reset to Draft"
                             invisible="state == 'draft'"/>
                     <field name="state" widget="statusbar"
                            statusbar_visible="draft,confirmed,checked_in,done"/>
@@ -53,7 +53,7 @@
                             <field name="patient_id"/>
                             <field name="practitioner_id"/>
                             <field name="room_id"/>
-                            <field name="plan_id"/>
+                            <field name="plan_id" groups="dental_clinic.group_dental_clinical_read"/>
                         </group>
                         <group>
                             <field name="start"/>

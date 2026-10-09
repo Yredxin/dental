@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from . import dental_patient
+from . import hr_employee
 from . import dental_medical_history
 from . import dental_practitioner
 from . import dental_room
@@ -12,3 +13,5 @@ from . import dental_prescription
 from . import dental_prescription_line
 from . import res_partner
 from . import account_move
+from . import res_users
+from . import dental_permission_profile

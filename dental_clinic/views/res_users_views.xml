@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_users_view_form_dental" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.dental</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='access_rights']" position="inside">
+                <button name="action_apply_dental_permission_profile" type="object"
+                        string="Apply Dental Permission Profile" class="btn-secondary"
+                        groups="dental_clinic.group_dental_configuration_write" invisible="share or not id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
